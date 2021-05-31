@@ -1,0 +1,2 @@
+class Coloc < ApplicationRecord
+end
