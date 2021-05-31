@@ -21,7 +21,7 @@ Task.create(name: "Cuisiner" , description: "" , points: 10 , image:)
 Task.create(name: "Mettre la table" , description: "" , points: 10 , image:)
 Task.create(name: "Débarasser la table" , description: "" , points: 10 , image:)
 Task.create(name: "Faire la vaisselle" , description: "" , points: 10 , image:)
-Task.create(name: "Sortir/vider la poubelle" , description: "" , points: 10 , ima)
+Task.create(name: "Sortir/vider la poubelle" , description: "" , points: 10 , image:)
 
 # Tâches pour le ménage
 Task.create(name: "Balayer" , description: "" , points: 10 , image:)
