@@ -1,0 +1,2 @@
+class FunCard < ApplicationRecord
+end
