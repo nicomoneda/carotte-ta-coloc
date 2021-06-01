@@ -1,0 +1,8 @@
+  <% @tasks.each do |task| %>
+        <p><%= task.name %></p>
+        <p><%= task.points %></p>
+        <%= link_to 'View Details', task_path(task) %>
+        <hr>
+  <% end %>
+
+<%= link_to 'Add a new task', new_task_path(@task) %>
