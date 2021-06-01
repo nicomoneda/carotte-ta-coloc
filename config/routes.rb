@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     passwords: 'users/passwords'
   }
 
-  resources :tasks, only: [:index, :create, :new]
+  root to: 'pages#home'
+
+  resources :tasks, only: [:index, :create, :new, :show]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :colocs do
