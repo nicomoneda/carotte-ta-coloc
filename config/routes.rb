@@ -5,9 +5,13 @@ Rails.application.routes.draw do
     passwords: 'users/passwords'
   }
 
-  root to: 'pages#home'
-
   resources :tasks, only: [:index, :create, :new]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :colocs do
+    get '/join', to: 'colocs#join'
+  end
+  
+  root to: 'pages#home'
 end
+
