@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   resources :colocs do
     get '/join', to: 'colocs#join'
   end
-  
-  root to: 'pages#home'
+
 end
 
