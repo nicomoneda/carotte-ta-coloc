@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     passwords: 'users/passwords'
   }
 
-  root to: 'sessions#new'
+  root to: 'pages#home'
 
   resources :tasks, only: [:index, :create, :new]
 
