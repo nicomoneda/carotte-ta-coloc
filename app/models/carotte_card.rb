@@ -2,11 +2,11 @@ class CarotteCard < ApplicationRecord
   belongs_to :user
   belongs_to :tasks
 
-  validates until_at_cannot_be_in_the_past, presence :true,
+  validates expiration_week_on, presence: :true,
 
-  def expiration_date_cannot_be_in_the_past
-    if :until_at.present? && :until_at < Date.today
-      errors.add(:until_at, "can't be in the past")
+  def expiration_week_on
+    if :week_on.present? && :week_on < Date.today
+      errors.add(:week_on, "can't be in the past")
     end
   end
 end
