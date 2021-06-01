@@ -6,8 +6,8 @@ class ColocsController < ApplicationController
   def create
     @coloc = Coloc.new(coloc_params)
 
-    if @coloc.save
-      current_user.update(coloc: @coloc)
+    if @coloc.save!
+      current_user.update(coloc_id: @coloc.id)
     else
       render :new
     end
