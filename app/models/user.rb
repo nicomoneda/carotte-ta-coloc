@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   belongs_to :coloc
+  has_many :carotte_cards
+  has_many :user_tasks
 end
