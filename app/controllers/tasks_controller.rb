@@ -13,13 +13,12 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
-
+    @task.coloc = current_coloc
     if @task.save!
       redirect_to tasks_path
     else
       render :new
     end
-
   end
 
   private
