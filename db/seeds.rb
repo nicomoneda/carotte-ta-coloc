@@ -18,9 +18,9 @@ louis =     User.create(coloc_id: 1, email: 'louis.lafon@gmail.com',    password
 guillaume = User.create(coloc_id: 1, email: 'guillaume.dore@gmail.com', password: 'carotte-guillaume',  name: 'Guillaume')
 
 
-Task.create(coloc_id: 1,  name: "Ranger les vêtements et les chaussures" ,     description: "Ce n'est pas rangé au bon endroit ? Tans pis pour eux, ça n'avait pas qu'à trainer !", 
+Task.create(coloc_id: 1,  name: "Ranger les vêtements et les chaussures" ,     description: "Ce n'est pas rangé au bon endroit ? Tans pis pour eux, ça n'avait pas qu'à trainer !",
                           points: 20, carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 40)
-Task.create(coloc_id: 1,  name: "Faire les courses" ,                          description: "Faites un effort, n'achetez pas seulement des pates", 
+Task.create(coloc_id: 1,  name: "Faire les courses" ,                          description: "Faites un effort, n'achetez pas seulement des pates",
                           points: 15, carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 30)
 Task.create(coloc_id: 1,  name: "Sortir/vider la poubelle" ,                   description: "Hop hop ! Ca vous fera les bras !",
                           points: 12, carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 24)
