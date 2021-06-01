@@ -8,7 +8,6 @@ class ColocsController < ApplicationController
 
     if @coloc.save
       current_user.update(coloc: @coloc)
-      redirect_to root_path
     else
       render :new
     end
@@ -16,7 +15,6 @@ class ColocsController < ApplicationController
 
   def join
     current_user.update(coloc: @coloc)
-
     redirect_to root_path
   end
 
