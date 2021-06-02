@@ -1,40 +1,27 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 Task.destroy_all
 User.destroy_all
 Coloc.destroy_all
 dream_coloc = Coloc.create(name: "dreamteam")
 
 
-lucas =     User.create(coloc: dream_coloc, email: 'lucas.boitier@gmail.com',  password: 'carotte-lucas',      name: 'Lucas')
-nico =      User.create(coloc: dream_coloc, email: 'nicolas.braun@gmail.com',  password: 'carotte-nicolas',    name: 'Nicolas')
-louis =     User.create(coloc: dream_coloc, email: 'louis.lafon@gmail.com',    password: 'carotte-louis',      name: 'Louis')
-guillaume = User.create(coloc: dream_coloc, email: 'guillaume.dore@gmail.com', password: 'carotte-guillaume',  name: 'Guillaume')
+lucas =     User.create(coloc: dream_coloc, email: 'lboitier@gmail.com',  password: 'lucascar',      name: 'Lucas')
+nico =      User.create(coloc: dream_coloc, email: 'nbraun@gmail.com',  password: 'nicolascar',    name: 'Nicolas')
+louis =     User.create(coloc: dream_coloc, email: 'llafon@gmail.com',    password: 'louiscar',      name: 'Louis')
+guillaume = User.create(coloc: dream_coloc, email: 'gdore@gmail.com', password: 'guillaumecar',  name: 'Guillaume')
 
 
-Task.create(coloc: dream_coloc,  name: "Ranger les vêtements et les chaussures" ,     description: "Ce n'est pas rangé au bon endroit ? Tans pis pour eux, ça n'avait pas qu'à trainer !", 
-                          points: 20, carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 40)
-Task.create(coloc: dream_coloc,  name: "Faire les courses" ,                          description: "Faites un effort, n'achetez pas seulement des pates", 
-                          points: 15, carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 30)
-Task.create(coloc: dream_coloc,  name: "Sortir/vider la poubelle" ,                   description: "Hop hop ! Ca vous fera les bras !",
-                          points: 12, carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 24)
-Task.create(coloc: dream_coloc,  name: "Epousseter" ,                                 description: "Attention, chutes d'araigné possible",
-                          points: 11, carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 22)
-Task.create(coloc: dream_coloc,  name: "Battre un tapis" ,                            description: "Pensez à le faire à l'extérieur" ,
-                          points: 5,  carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 10)
-Task.create(coloc: dream_coloc,  name: "Passer la serpillère" ,                       description: "Ne transformez pas votre colloc en piscine !" ,
-                          points: 30, carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 60)
-Task.create(coloc: dream_coloc,  name: "Balayer/Passer l'aspirateur",                 description: "Et on n'oublie pas de passer sous les meubles !" ,
-                          points: 30, carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 60)
-Task.create(coloc: dream_coloc,  name: "Nettoyer la salle de bains/les toilettes" ,   description: "Bon chance..." ,
-                          points: 90, carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 180)
-Task.create(coloc: dream_coloc,  name: "Laver les vitres" ,                           description: "Si on se la mange en pleine figure, c'est bon signe" ,
-                          points: 50, carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 100)
-Task.create(coloc: dream_coloc,  name: "Arroser/Soigner les plantes" ,                description: "Carressez la dans le sens de la feuille" ,
-                          points: 7,  carotte_card_name: "joker", carotte_card_description: "Vous carrottez votre coloc", carotte_card_points: 14)
+Task.create(coloc: dream_coloc,  name: "Vider le verre" ,     description: "Le plus chiant, c'est pas de vider le verre, c'est de trouver le container...", points: 50, carotte_card_name: "joker", carotte_card_points: 60, image: 'verre.png')
+
+Task.create(coloc: dream_coloc,  name: "Faire les courses" , description: "N'oublie rien sur la liste", points: 45, carotte_card_name: "joker", carotte_card_points: 55, image: 'courses.png')
+
+Task.create(coloc: dream_coloc,  name: "Sortir le chien" , description: "Miskine si il fait ses gros besoins", points: 40, carotte_card_name: "joker", carotte_card_points: 50, image: 'chien.png')
+
+Task.create(coloc: dream_coloc,  name: "Passer la serpière" , description: "À l'eau chaude stp", points: 35, carotte_card_name: "joker", carotte_card_points: 45, image: 'mop.png')
+
+Task.create(coloc: dream_coloc,  name: "Laver la Salle de Bain" , description: "Oublie pas d'enlever les poils", points: 30, carotte_card_name: "joker", carotte_card_points: 40, image: 'bath.png')
+
+Task.create(coloc: dream_coloc,  name: "Laver les vitres" , description: "Miroir Miroir", points: 25, carotte_card_name: "joker", carotte_card_points: 35, image: 'vitre.png')
+
+Task.create(coloc: dream_coloc,  name: "Passer l'aspi" , description: "Même sous les meubles", points: 20, carotte_card_name: "joker", carotte_card_points: 30, image: 'aspi.png')
+
+Task.create(coloc: dream_coloc,  name: "Sortir les poubelles" , description: "Pense au tri mskn", points: 15, carotte_card_name: "joker", carotte_card_points: 25, image: 'poubelle.png')
