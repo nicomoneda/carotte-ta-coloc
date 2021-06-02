@@ -1,9 +1,13 @@
 class UsersTasksController < ApplicationController
   def create
-    @task = Task.new(task_params)
+    # Je récupère mes tâches
+    @tasks = Task.all(task_params)
+    # J'alloue mes tâches de manière aléatoire. Elles sont au nombre de 2 par personnes.
+    @user_tasks = Task.to_a.sample(2)
+    @tasks.user_tasks = @user_tasks
     @task.save
-
-    redirect_to task_path(@task)
+    # je redirige à la page de la coloc
+    redirect_to coloc_path
   end
 
   private
