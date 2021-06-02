@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 2021_06_02_133011) do
     t.bigint "coloc_id"
     t.string "avatar"
     t.string "name"
-    t.integer "total_points", null: false
+    t.integer "total_points", default: 0, null: false
     t.index ["coloc_id"], name: "index_users_on_coloc_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

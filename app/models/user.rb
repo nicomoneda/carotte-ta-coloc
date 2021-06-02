@@ -7,4 +7,5 @@ class User < ApplicationRecord
   belongs_to :coloc
   has_many :carotte_cards
   has_many :user_tasks
+  has_many :tasks, through: :user_tasks
 end
