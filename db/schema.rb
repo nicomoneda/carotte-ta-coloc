@@ -10,18 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_02_130319) do
+ActiveRecord::Schema.define(version: 2021_06_02_133011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "carotte_cards", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "tasks_id", null: false
-    t.date "week_on"
+    t.bigint "task_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["tasks_id"], name: "index_carotte_cards_on_tasks_id"
+    t.index ["task_id"], name: "index_carotte_cards_on_task_id"
     t.index ["user_id"], name: "index_carotte_cards_on_user_id"
   end
 
@@ -59,17 +58,17 @@ ActiveRecord::Schema.define(version: 2021_06_02_130319) do
     t.integer "carotte_card_points"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.date "week_on"
     t.index ["coloc_id"], name: "index_tasks_on_coloc_id"
   end
 
   create_table "user_tasks", force: :cascade do |t|
     t.string "status"
     t.bigint "user_id", null: false
-    t.bigint "tasks_id", null: false
-    t.date "week_on"
+    t.bigint "task_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["tasks_id"], name: "index_user_tasks_on_tasks_id"
+    t.index ["task_id"], name: "index_user_tasks_on_task_id"
     t.index ["user_id"], name: "index_user_tasks_on_user_id"
   end
 
@@ -90,12 +89,12 @@ ActiveRecord::Schema.define(version: 2021_06_02_130319) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "carotte_cards", "tasks", column: "tasks_id"
+  add_foreign_key "carotte_cards", "tasks"
   add_foreign_key "carotte_cards", "users"
   add_foreign_key "consommations", "fun_cards", column: "fun_cards_id"
   add_foreign_key "consommations", "users", column: "users_id"
   add_foreign_key "tasks", "colocs"
-  add_foreign_key "user_tasks", "tasks", column: "tasks_id"
+  add_foreign_key "user_tasks", "tasks"
   add_foreign_key "user_tasks", "users"
   add_foreign_key "users", "colocs"
 end
