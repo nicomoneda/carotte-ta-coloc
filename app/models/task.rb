@@ -1,6 +1,7 @@
 class Task < ApplicationRecord
   belongs_to :coloc
 
+  has_many :user_tasks, dependent: :destroy
   validates :name, presence: true
   validates :description, presence: true
   validates :points, inclusion: { in: (1..200) }
