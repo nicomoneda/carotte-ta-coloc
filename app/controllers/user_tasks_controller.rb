@@ -8,6 +8,6 @@ class UserTasksController < ApplicationController
     sum_points = @user.current_points + @task.point
     @user.update(current_points: sum_points)
 
-    # redirect_to homepage_path (A definir pour revenir au dashboard de la coloc, voir avec Louis)
+    redirect_to root_path
   end
 end
