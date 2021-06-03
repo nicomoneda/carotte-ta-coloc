@@ -5,14 +5,8 @@ class DistribTasksToUsersJob < ApplicationJob
     coloc_tasks = coloc.tasks.order(points: :desc)
     tasks_to_assign = coloc_tasks.to_a
 
-    # tasks_to_assign.each do |task|
-    #   user_with_less_points = coloc.users.order(total_points: :asc).limit(1).first
-    #   UserTask.create(user: user_with_less_points, task: task)
-    #   user_with_less_points.update(total_points: +task.points)
-    # end
-
     next_week = Date.today.next_week
-
+    
     tasks_to_assign.each do |task|
       user_with_less_points = coloc.users.order(total_points: :asc).first
       UserTask.create!(user: user_with_less_points, task: task, week_on: next_week)
