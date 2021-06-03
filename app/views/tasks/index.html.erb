@@ -2,8 +2,18 @@
 
 
   <% @tasks.each do |task| %>
-        <p><%= task.name %></p>
-        <p><%= task.points %></p>
+      <div class="task_card">
+        <div>
+          <%= image_tag task.image, alt: 'task_image', class: 'task_image_small' %>
+        </div>
+        <div class="task_card_content">
+          <h5><%= task.name %></h5>
+          <p><%= task.points %></p>
+          <p><%= task.image %></p>
+        </div>
+
+
+        </div>
         <%= link_to 'View Details', task_path(task) %>
         <hr>
   <% end %>
