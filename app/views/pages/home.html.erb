@@ -6,8 +6,8 @@
   <div>
     <% @tasks_to_do.each do |user_task| %>
     <div>
-      <p><%= user_task.task.name %></p>
     </div>
+    <p><%= user_task.task.name %></p>
         <%= link_to 'Mark a task as done', mark_as_done_user_task_path(user_task), class:"btn-ghost-small" %>
     <% end %>
   </div>
