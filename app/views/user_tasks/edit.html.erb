@@ -1,0 +1,8 @@
+<h1>Mark your task as done</h1>
+
+<%= form_for(@user_task) do |f| %>
+  <%= f.label :status %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Go to home', root_path , class:"btn-ghost-small"%>

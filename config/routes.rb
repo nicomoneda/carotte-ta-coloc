@@ -14,5 +14,10 @@ Rails.application.routes.draw do
     get '/join', to: 'colocs#join'
   end
 
+  resources :carotte_cards, only: [:index]
+  resources :user_tasks, only: [:edit, :update] do
+    get 'mark_as_done', on: :member
+  end
+
 end
 
