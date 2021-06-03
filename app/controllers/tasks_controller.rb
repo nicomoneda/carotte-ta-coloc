@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all
+    # @tasks = Task.all.includes(current_user_task: :user)
+    @tasks_of_the_week = UserTask.current_week.map(&:task)
   end
 
   def show
