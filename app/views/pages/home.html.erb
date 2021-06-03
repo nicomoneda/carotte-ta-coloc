@@ -1,28 +1,51 @@
-<h1>Home</h1>
+<h1>Mes tâches</h1>
 
-<% if @coloc.present? %>
-  <p>Dashboard</p>
-
-  <div>
-    <% @tasks_to_do.each do |user_task| %>
+<% @my_tasks_current_week.each do |my_task| %>
+  <div class="task_card">
     <div>
+        <%= image_tag my_task.image, alt: 'task_image', class: 'task_image_small' %>
     </div>
-    <p><%= user_task.task.name %></p>
-        <%= link_to 'Mark a task as done', mark_as_done_user_task_path(user_task), class:"btn-ghost-small" %>
-    <% end %>
+
+    <div class="task_card_content">
+      <h5><%= my_task.name %></h5>
+      <p><%= my_task.points %></p>
+    </div>
   </div>
 
-  <div>
-  <%= link_to 'Go to carottes cards', carotte_cards_path, class:"btn-ghost-small"%>
-  </div>
+  <%= link_to 'View Details', task_path(my_task) %>
 
-  <div>
-  <%= link_to 'Go to your coloc', coloc_path(@coloc), class:"btn-ghost-small"%>
-  </div>
-
-
-  <% else %>
-
-    <%= link_to 'Create a coloc', new_coloc_path %>
+  <hr>
 
 <% end %>
+
+<h1> Les tâches des colocs'</h1>
+
+<% @other_tasks_current_week.each do |other_task| %>
+  <div class="task_card">
+    <div>
+        <%= image_tag other_task.image, alt: 'task_image', class: 'task_image_small' %>
+    </div>
+
+    <div class="task_card_content">
+      <h5><%= other_task.name %></h5>
+      <p><%= other_task.points %></p>
+      <p><%= other_task.current_user_task.user.name %></p>
+    </div>
+  </div>
+
+<% end %>
+
+<div>
+  <%= link_to 'Go to your coloc'%>
+</div>
+
+<div>
+  <%= link_to 'Shop'%>
+</div>
+
+<div>
+  <%= link_to 'Log out'%>
+</div>
+
+
+
