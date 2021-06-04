@@ -3,7 +3,7 @@
   <%= f.text_field :name %>
 
   <%= f.label :image %>
-  <%= f.file_field :image %>
+  <%= f.input :image, as: :file %>
 
   <%= f.submit "Submit proof" %>
 <% end %>
