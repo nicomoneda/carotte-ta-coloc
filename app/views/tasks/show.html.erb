@@ -1,11 +1,9 @@
 <p><%= @task.name %></p>
 <p><%= @task.description %></p>
 <p><%= @task.points %></p>
+ <p><%= image_tag (@task.image) %></p>
 
 <div>
-  <h1>Here is your task</h1>
-  <h2> <%= @task.name %></h2>
-  <%= image_tag (@task.image)  %>
   <%= link_to 'Mark a task as done', %>
 </div>
 
