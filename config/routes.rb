@@ -17,7 +17,10 @@ Rails.application.routes.draw do
   resources :carotte_cards, only: [:index]
   resources :user_tasks, only: [:edit, :update] do
     get 'mark_as_done', on: :member
+    post 'carotte', on: :member
+    get 'carotte_validation', on: :member
   end
+  
 
 end
 
