@@ -13,11 +13,9 @@ class UserTasksController < ApplicationController
     @user_task.update(status: true)
     sum_points = @user.current_points + @task.point
     @user.update(current_points: sum_points)
-
-    redirect_to root_path
   end
 
-  def carotte_task
+  def carotte
     if @user.current_points >= @task.carotte_card_points
       other_users = current_coloc.users -  @user  
       carotted_user = other_users.sample
@@ -27,15 +25,13 @@ class UserTasksController < ApplicationController
       carotted_total_points = @user.total_points - @task.carotte_card_points
       @user.update(current_points: carotted_points, total_points: carotted_total_points)
     end
-
-    # redirect_to (Affichage de "Vous avez carotté XXX"), then redirect_to root_path
   end
 
   private
 
   def set_user_vars
-    @task = Task.find(params[:id])
-    @user_task = @task.user_tasks.where(user: current_user)
+    @user_task = UserTask.find(params[:id])
+    @task = @user_task.task
     @user = current_user
   end
 
