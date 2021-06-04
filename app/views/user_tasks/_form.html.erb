@@ -1,0 +1,9 @@
+<%= form_for(@user_tasks) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :image %>
+  <%= f.input :image, as: :file %>
+
+  <%= f.submit "Submit proof" %>
+<% end %>
