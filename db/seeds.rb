@@ -4,10 +4,10 @@ Coloc.destroy_all
 dream_coloc = Coloc.create(name: "dreamteam")
 
 
-lucas =     User.create(coloc: dream_coloc, email: 'lboitier@gmail.com',  password: 'lucascar',      name: 'Lucas')
-nico =      User.create(coloc: dream_coloc, email: 'nbraun@gmail.com',  password: 'nicolascar',    name: 'Nicolas')
-louis =     User.create(coloc: dream_coloc, email: 'llafon@gmail.com',    password: 'louiscar',      name: 'Louis')
-guillaume = User.create(coloc: dream_coloc, email: 'gdore@gmail.com', password: 'guillaumecar',  name: 'Guillaume')
+lucas =     User.create(coloc: dream_coloc, email: 'lboitier@gmail.com',  password: 'lucascar',      name: 'Lucas', avatar: 'lucas.png')
+nico =      User.create(coloc: dream_coloc, email: 'nbraun@gmail.com',  password: 'nicolascar',    name: 'Nicolas', avatar: 'nico.png')
+louis =     User.create(coloc: dream_coloc, email: 'llafon@gmail.com',    password: 'louiscar',      name: 'Louis', avatar: 'louis.png')
+guillaume = User.create(coloc: dream_coloc, email: 'gdore@gmail.com', password: 'guillaumecar',  name: 'Guillaume', avatar: 'guillaume.png')
 
 
 Task.create(coloc: dream_coloc,  name: "Vider le verre" ,     description: "Le plus chiant, c'est pas de vider le verre, c'est de trouver le container...", points: 50, carotte_card_name: "joker", carotte_card_points: 60, image: 'verre.png')

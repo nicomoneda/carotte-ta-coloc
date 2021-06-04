@@ -29,23 +29,10 @@
     <div class="task_card_content">
       <h5><%= other_task.name %></h5>
       <p><%= other_task.points %></p>
-      <p><%= other_task.current_user_task.user.name %></p>
+      <p><%= image_tag other_task.current_user_task.user.avatar, alt: 'task_image', class: 'avatar' %></p>
+
     </div>
   </div>
 
+  <hr>
 <% end %>
-
-<div>
-  <%= link_to 'Go to your coloc'%>
-</div>
-
-<div>
-  <%= link_to 'Shop'%>
-</div>
-
-<div>
-  <%= link_to 'Log out'%>
-</div>
-
-
-
