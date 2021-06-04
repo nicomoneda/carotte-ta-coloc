@@ -11,8 +11,9 @@ class UserTasksController < ApplicationController
 
   def mark_as_done
     @user_task.update(status: true)
-    sum_points = @user.current_points + @task.point
+    sum_points = @user.current_points + @task.points
     @user.update(current_points: sum_points)
+    redirect_to root_path
   end
 
   def carotte

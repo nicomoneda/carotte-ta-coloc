@@ -11,6 +11,20 @@
 // Your CSS partials
 @import "components/index";
 @import "components/task_card";
+@import "components/headers";
 @import "components/tab_bar";
 @import "components/task_image";
+@import "components/actions";
+@import "components/carot";
 @import "pages/index";
+
+
+h4 {
+  margin: 24px 12px;
+  font-family: 'Source Sans Pro';
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Open Sans';
+}

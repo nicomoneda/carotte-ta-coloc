@@ -1,41 +1,56 @@
 <h1>Mes points : </h1>
 <%= current_user.current_points %>
 
-<h1>Mes tâches</h1>
+<h4 class="current_task_title">Mes tâches en cours</h4>
 
-<% @my_tasks_current_week.each do |my_task| %>
-  <div class="task_card">
-    <div>
-        <%= image_tag my_task.image, alt: 'task_image', class: 'task_image_small' %>
-    </div>
 
-    <div class="task_card_content">
-      <h5><%= my_task.name %></h5>
-      <p><%= my_task.points %></p>
-    </div>
-  </div>
 
-  <%= link_to 'View Details', task_path(my_task) %>
+  <% @my_tasks_current_week.each do |my_task| %>
+    <div class="my_tasks">
+    <div class="task_card">
+      <div class="task_card_content">
+        <div>
+            <%= image_tag my_task.image, alt: 'task_image', class: 'task_image_small' %>
+        </div>
+
+        <div class="task_card_text">
+          <p><%= my_task.name %></p>
+          <div class="task_points">
+            <p><%= my_task.points %>
+              <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="see_more">
+        <%= link_to '<i class="fas fa-chevron-right"></i>'.html_safe, task_path(my_task), class:'task_card_see_more' %>
+      </div>
+</div>
+  <% end %>
 
   <hr>
 
-<% end %>
-
-<h1> Les tâches des colocs'</h1>
+<h4 class="current_task_title"> Les tâches des colocs'</h4>
 
 <% @other_tasks_current_week.each do |other_task| %>
+<div class="other_tasks">
   <div class="task_card">
-    <div>
-        <%= image_tag other_task.image, alt: 'task_image', class: 'task_image_small' %>
-    </div>
-
     <div class="task_card_content">
-      <h5><%= other_task.name %></h5>
-      <p><%= other_task.points %></p>
-      <p><%= image_tag other_task.current_user_task.user.avatar, alt: 'task_image', class: 'avatar' %></p>
+      <div>
+          <%= image_tag other_task.image, alt: 'task_image', class: 'task_image_small' %>
+      </div>
 
+      <div class="task_card_text">
+        <p><%= other_task.name %></p>
+          <div class="task_points">
+            <p><%= other_task.points %>
+              <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
+            </p>
+          </div>
+            <p><%= image_tag other_task.current_user_task.user.avatar, alt: 'task_image', class: 'avatar_card' %></p>
+      </div>
     </div>
   </div>
-
-  <hr>
+</div>
 <% end %>
