@@ -31,7 +31,7 @@
 
 
 .other_tasks {
-  border: solid 1px rgba(254, 203, 100, 0.7) ;
+  border: solid 2px rgba(254, 203, 100, 0.7) ;
   border-radius: 16px;
   padding: 12px;
   margin-top: 8px;
@@ -46,7 +46,7 @@
 .task_points {
   background-color: #FA706E;
   border-radius: 12px;
-  padding: 8px;
+  padding: 9px;
   display: inline-block;
 }
 
@@ -55,4 +55,8 @@
   color: white;
   font-family: 'Open Sans';
   font-size: 16px;
+}
+
+.task_name {
+  color: white;
 }
