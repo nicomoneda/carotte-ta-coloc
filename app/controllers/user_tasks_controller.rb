@@ -1,4 +1,6 @@
 class UserTasksController < ApplicationController
+  before_action :set_user_vars, only: [:mark_as_done, :carotte_task]
+
   def edit
     @user_task = UserTask.find(params[:id])
   end
@@ -8,10 +10,6 @@ class UserTasksController < ApplicationController
   end
 
   def mark_as_done
-    @user_task = UserTask.find(params[:id])
-    @task = Task.find(@user_task.task_id)
-    @user = User.find(@user_task.user_id)
-
     @user_task.update(status: true)
     sum_points = @user.current_points + @task.point
     @user.update(current_points: sum_points)
@@ -20,10 +18,6 @@ class UserTasksController < ApplicationController
   end
 
   def carotte_task
-    @user_task = UserTask.find(params[:id])
-    @user = @user_task.user
-    @task = @user_task.task
-
     if @user.current_points >= @task.carotte_card_points
       other_users = current_coloc.users -  @user  
       carotted_user = other_users.sample
@@ -33,9 +27,17 @@ class UserTasksController < ApplicationController
       carotted_total_points = @user.total_points - @task.carotte_card_points
       @user.update(current_points: carotted_points, total_points: carotted_total_points)
     end
+
+    # redirect_to (Affichage de "Vous avez carotté XXX"), then redirect_to root_path
   end
 
   private
+
+  def set_user_vars
+    @task = Task.find(params[:id])
+    @user_task = @task.user_tasks.where(user: current_user)
+    @user = current_user
+  end
 
   # def dreams_params
   #   params.require(:user_tasks).permit(:status)
