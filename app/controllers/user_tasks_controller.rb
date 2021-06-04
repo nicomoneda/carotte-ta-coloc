@@ -24,6 +24,8 @@ class UserTasksController < ApplicationController
       carotted_points = @user.current_points - @task.carotte_card_points
       carotted_total_points = @user.total_points - @task.carotte_card_points
       @user.update(current_points: carotted_points, total_points: carotted_total_points)
+
+      redirect_to carotte_user_task_path
     end
   end
 
