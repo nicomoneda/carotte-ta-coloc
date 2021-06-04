@@ -16,8 +16,10 @@ class UserTasksController < ApplicationController
   end
 
   def carotte
+    array_user = []
+    array_user << @user
     if @user.current_points >= @task.carotte_card_points
-      other_users = current_coloc.users -  @user  
+      other_users = current_coloc.users - array_user
       carotted_user = other_users.sample
       @user_task.update(user: carotted_user)
 
@@ -25,8 +27,11 @@ class UserTasksController < ApplicationController
       carotted_total_points = @user.total_points - @task.carotte_card_points
       @user.update(current_points: carotted_points, total_points: carotted_total_points)
 
-      redirect_to carotte_user_task_path
+      redirect_to carotte_validation_user_task_path
     end
+  end
+
+  def carotte_validation
   end
 
   private
