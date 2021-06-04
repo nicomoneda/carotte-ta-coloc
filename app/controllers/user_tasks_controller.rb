@@ -28,11 +28,12 @@ class UserTasksController < ApplicationController
       carotted_total_points = @user.total_points - @task.carotte_card_points
       @user.update(current_points: carotted_points, total_points: carotted_total_points)
 
-      redirect_to carotte_validation_user_task_path
+      redirect_to carotte_validation_user_task_path(username: carotted_user.name)
     end
   end
 
   def carotte_validation
+    @carotted_user = params[:username]
   end
 
   private
