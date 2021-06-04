@@ -1,9 +1,9 @@
 <h1>Mark your task as done</h1>
 
-<%= simple_form_for(@user_task) do |f| %>
+<%= simple_form_for(@user_task, url: mark_as_done_user_task_path(@user_task)) do |f| %>
   <%= f.input :status %>
   <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
 
-<%= link_to 'Go to home', root_path , class:"btn-ghost-small"%>
+<%= link_to 'Go to home', root_path, class:"btn-ghost-small"%>
