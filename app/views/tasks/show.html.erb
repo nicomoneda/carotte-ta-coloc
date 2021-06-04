@@ -1,15 +1,11 @@
 <p><%= @task.name %></p>
 <p><%= @task.description %></p>
 <p><%= @task.points %></p>
-<p><%= cl_image_tag @task.image.key, height: 100, width: 150, crop: :fill %></p>
 
 <div>
-  <%= link_to 'Mark a task as done', %>
+  <%= link_to 'Mark a task as done'%>
 </div>
 
 <div>
   <%= link_to 'Je carotte mon coloc'%>
 </div>
-
-
-

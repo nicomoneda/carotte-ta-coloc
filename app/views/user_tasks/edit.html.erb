@@ -1,7 +1,8 @@
 <h1>Mark your task as done</h1>
 
-<%= form_for(@user_task) do |f| %>
-  <%= f.label :status %>
+<%= simple_form_for(@user_task) do |f| %>
+  <%= f.input :status %>
+  <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
 
