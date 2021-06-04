@@ -25,3 +25,9 @@ Task.create(coloc: dream_coloc,  name: "Laver les vitres" , description: "Miroir
 Task.create(coloc: dream_coloc,  name: "Passer l'aspi" , description: "Même sous les meubles", points: 20, carotte_card_name: "joker", carotte_card_points: 30, image: 'aspi.png', image_done: 'aspi_done.png')
 
 Task.create(coloc: dream_coloc,  name: "Sortir les poubelles" , description: "Pense au tri mskn", points: 15, carotte_card_name: "joker", carotte_card_points: 25, image: 'poubelle.png', image_done: 'poubelle_verre.png')
+
+
+FunCard.create(name: "APEROOOOOO",      description: "C'est l'apéro ! Let's go !",                  points: 150)
+FunCard.create(name: "Dégagez !",       description: "Tout le monde dehors, l'appart est à moi !",  points: 250)
+FunCard.create(name: "Soirée film",     description: "Ptit film pour ce soir",                      points: 100)
+
