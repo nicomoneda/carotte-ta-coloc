@@ -6,6 +6,14 @@
   <%= link_to 'Mark a task as done', edit_user_task_path(@task.current_user_task)%>
 </div>
 
+
+<div class="actions">
+
+  <div>
+  <lottie-player id="mark_as_done_anim" src="https://assets8.lottiefiles.com/packages/lf20_ytl1btfo.json" background="transparent"  speed="2.5"  style="width: 150px; height: 150px;"></lottie-player>
+  </div>
+</div>
+
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Je carotte mon coloc !
 </button>
@@ -32,6 +40,3 @@
 <p>Carotte cost :</p>
 <p><%= @task.carotte_card_points %></p>
 
-<div>
-  <%= link_to 'Je carotte mon coloc'%>
-</div>
