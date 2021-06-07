@@ -1,0 +1,26 @@
+.btn-check {
+  color: white;
+  font-size: 50px;
+  background-color: #008A61;
+  padding: 14px 18px;
+  border-radius: 50%;
+}
+
+.btn-carot {
+  color: white;
+  font-size: 50px;
+  background-color: #E46E0E;
+  padding: 14px 28px;
+  border-radius: 50%;
+  margin-left: 66px;
+}
+
+.btn_form {
+  display: flex;
+}
+
+.submit_btn_show {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
