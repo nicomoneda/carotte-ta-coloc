@@ -28,7 +28,7 @@
         <% if my_task.current_user_task.status == false %>
           <%= link_to '<i class="fas fa-chevron-right"></i>'.html_safe, task_path(my_task), class:'task_card_see_more' %>
         <% else %>
-          <%=   %>
+          <%= image_tag my_task.image_done, class: "task_image_small"  %>
         <% end %>
       </div>
   </div>

@@ -1,5 +1,5 @@
 class UserTasksController < ApplicationController
-  before_action :set_user_vars, only: [:mark_as_done, :carotte]
+  before_action :set_user_vars, only: [:mark_as_done, :carotte, :carotte_validation]
 
   def edit
     @user_task = UserTask.find(params[:id])
@@ -26,14 +26,17 @@ class UserTasksController < ApplicationController
 
       carotted_points = @user.current_points - @task.carotte_card_points
       carotted_total_points = @user.total_points - @task.carotte_card_points
+      old_points = @user.current_points
       @user.update(current_points: carotted_points, total_points: carotted_total_points)
 
-      redirect_to carotte_validation_user_task_path(username: carotted_user.name)
+      redirect_to carotte_validation_user_task_path(username: carotted_user.name, old_points: old_points)
     end
   end
 
   def carotte_validation
     @carotted_user = params[:username]
+    @old_points = params[:old_points]
+
   end
 
   private
