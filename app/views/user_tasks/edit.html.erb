@@ -1,12 +1,20 @@
+<h4 class="title">Validez votre tâche</h4>
+
 <div class="container">
-  <h4 class="title">Mark your task as done</h4>
   <br>
     <div class="tasks_done">
       <%= simple_form_for(@user_task, url: mark_as_done_user_task_path(@user_task)) do |f| %>
-        <%= f.input :photo, as: :file %>
-        <%= f.submit %>
+
+        <div class="form-group file optional user_task_photo">
+          <label class="file optional" for="user_task_photo">
+            <%= image_tag "camera-02.png", class: "preview_img task_image_medium" %>
+          </label>
+          <input class="form-control-file file optional" type="file" name="user_task[photo]" id="user_task_photo">
+        </div>
+
+        <input class="input_btn" type="submit" name="commit" value="Je valide !">
+    
       <% end %>
       <br>
-      <%= link_to 'Go to home', root_path, class:"btn_home"%>
     </div>
 </div>
