@@ -9,12 +9,17 @@
   <p><%= @task.description %></p>
   <p><%= @task.points %></p>
 
-  <div class="buttons_show_task">
-    <%= link_to 'Mark a task as done', edit_user_task_path(@task.current_user_task), class: "btn btn-info text-white btn-block"%>
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group mr-2" role="group" aria-label="First group">
+        <%= link_to  icon('fas', 'check'), edit_user_task_path(@task.current_user_task),  class: "btn btn-success text-white btn-block"%>
+      </div>
 
-    <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#exampleModal">
-      Je carotte mon coloc !
-    </button>
+      <div class="btn-carot" class="btn-group mr-2" role="group" aria-label="First group">
+        <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#exampleModal">
+          <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
+        </button>
+      </div>
+    </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -34,7 +39,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <div>
     <p class="carotte_cost">Carotte cost : <%= @task.carotte_card_points %></p>
