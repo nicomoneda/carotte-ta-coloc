@@ -1,6 +1,6 @@
 <div class="tab-bar">
   <div class="tab_elements">
-    <%= link_to image_tag('coloc.png'), class:"icon"%>
+    <%= link_to image_tag('coloc.png'), root_path, class:"icon"%>
   </div>
 
   <div class="tab_elements">
@@ -8,6 +8,19 @@
   </div>
 
   <div class="tab_elements">
-    <%= link_to image_tag('door.png'), class:"icon"%>
+      <div class="navbar-toggle-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="current-points">
+          <%= current_user.current_points %>
+          <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
   </div>
 </div>

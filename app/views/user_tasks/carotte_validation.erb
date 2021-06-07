@@ -1,9 +1,9 @@
-<h1>Vous avez carotté :</h1>
+<div class="container">
+  <h1>Vous avez carotté :</h1>
+
+  <%= @carotted_user %>
+</div>
 
 <div id="value" data-end-number="<%= @old_points.to_i - @task.carotte_card_points %>" >
   <%= @old_points %>
 </div>
-
- <p><%= @carotted_user %></p>
-
-

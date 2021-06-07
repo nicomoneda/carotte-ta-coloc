@@ -1,62 +1,72 @@
-<h4 class="current_task_title">Mes tâches en cours</h4>
-  <% @my_tasks_current_week.each do |my_task| %>
-    <div class="my_tasks">
+
+<h4 class="title">Dashboard</h4>
+
+
+<div class="container">
+  <div class="my_task_title">
+    <div>
+      <h4 class="current_task_title">Mes tâches en cours</h4>
+    </div>
+    <div>
+      <%= image_tag current_user.avatar, class: 'avatar'%>
+    </div>
+  </div>
+    <% @my_tasks_current_week.each do |my_task| %>
+      <div class="my_tasks">
+      <div class="task_card">
+        <div class="task_card_content">
+          <div>
+              <% if my_task.current_user_task.status == false %>
+                <%= image_tag my_task.image, alt: 'task_image', class: 'task_image_small' %>
+              <% else %>
+                <%= image_tag my_task.image_done, class: "task_image_small"  %>
+              <% end %>
+          </div>
+
+          <div class="task_card_text">
+            <p class="task_name"><%= my_task.name %></p>
+            <div class="task_points">
+              <p><%= my_task.points %>
+                <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="see_more">
+          <% if my_task.current_user_task.status == false %>
+            <%= link_to '<i class="fas fa-chevron-right"></i>'.html_safe, task_path(my_task), class:'task_card_see_more' %>
+          <% else %>
+            <%=   %>
+          <% end %>
+        </div>
+    </div>
+  </div>
+    <% end %>
+
+    <hr>
+
+  <h4 class="current_task_title"> Les tâches des colocs'</h4>
+
+  <% @other_tasks_current_week.each do |other_task| %>
+  <div class="other_tasks">
     <div class="task_card">
       <div class="task_card_content">
-
-
-
         <div>
-            <% if my_task.current_user_task.status == false %>
-              <%= image_tag my_task.image, alt: 'task_image', class: 'task_image_small' %>
-            <% else %>
-              <%= image_tag my_task.image_done, class: "task_image_small"  %>
-            <% end %>
+            <%= image_tag other_task.image, alt: 'task_image', class: 'task_image_small' %>
         </div>
 
         <div class="task_card_text">
-          <p class="task_name"><%= my_task.name %></p>
-          <div class="task_points">
-            <p><%= my_task.points %>
-              <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
-            </p>
-          </div>
+          <p><%= other_task.name %></p>
+            <div class="task_points">
+              <p><%= other_task.points %>
+                <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
+              </p>
+            </div>
+              <p><%= image_tag other_task.current_user_task.user.avatar, alt: 'task_image', class: 'avatar_card' %></p>
         </div>
-      </div>
-
-      <div class="see_more">
-        <% if my_task.current_user_task.status == false %>
-          <%= link_to '<i class="fas fa-chevron-right"></i>'.html_safe, task_path(my_task), class:'task_card_see_more' %>
-        <% else %>
-          <%= image_tag my_task.image_done, class: "task_image_small"  %>
-        <% end %>
-      </div>
-  </div>
-</div>
-  <% end %>
-
-  <hr>
-
-<h4 class="current_task_title"> Les tâches des colocs'</h4>
-
-<% @other_tasks_current_week.each do |other_task| %>
-<div class="other_tasks">
-  <div class="task_card">
-    <div class="task_card_content">
-      <div>
-          <%= image_tag other_task.image, alt: 'task_image', class: 'task_image_small' %>
-      </div>
-
-      <div class="task_card_text">
-        <p><%= other_task.name %></p>
-          <div class="task_points">
-            <p><%= other_task.points %>
-              <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
-            </p>
-          </div>
-            <p><%= image_tag other_task.current_user_task.user.avatar, alt: 'task_image', class: 'avatar_card' %></p>
       </div>
     </div>
   </div>
+  <% end %>
 </div>
-<% end %>
