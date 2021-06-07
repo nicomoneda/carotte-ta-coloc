@@ -5,5 +5,6 @@ class FunCardsController < ApplicationController
 
   def show
     @fun_card = FunCard.find(params[:id])
+    @consommation = Consommation.new
   end
 end

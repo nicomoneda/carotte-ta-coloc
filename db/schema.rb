@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2021_06_04_135707) do
-
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,13 +52,13 @@ ActiveRecord::Schema.define(version: 2021_06_04_135707) do
   end
 
   create_table "consommations", force: :cascade do |t|
-    t.bigint "fun_cards_id", null: false
-    t.bigint "users_id", null: false
+    t.bigint "fun_card_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.date "week_on"
-    t.index ["fun_cards_id"], name: "index_consommations_on_fun_cards_id"
-    t.index ["users_id"], name: "index_consommations_on_users_id"
+    t.index ["fun_card_id"], name: "index_consommations_on_fun_card_id"
+    t.index ["user_id"], name: "index_consommations_on_user_id"
   end
 
   create_table "fun_cards", force: :cascade do |t|
@@ -119,8 +116,8 @@ ActiveRecord::Schema.define(version: 2021_06_04_135707) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "carotte_cards", "tasks"
   add_foreign_key "carotte_cards", "users"
-  add_foreign_key "consommations", "fun_cards", column: "fun_cards_id"
-  add_foreign_key "consommations", "users", column: "users_id"
+  add_foreign_key "consommations", "fun_cards"
+  add_foreign_key "consommations", "users"
   add_foreign_key "tasks", "colocs"
   add_foreign_key "user_tasks", "tasks"
   add_foreign_key "user_tasks", "users"

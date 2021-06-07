@@ -1,3 +1,11 @@
+<h4>GROSSES CAROTTES MAGGLE</h4>
+<div>
+  <% if current_user.consommations %>
+    <%= current_user.consommations.last.fun_card.name %> - <%= current_user.consommations.last.week_on %>
+  <% end %>
+  
+</div>
+
 <h4 class="current_task_title">Mes tâches en cours</h4>
   <% @my_tasks_current_week.each do |my_task| %>
     <div class="my_tasks">

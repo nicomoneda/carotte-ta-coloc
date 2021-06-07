@@ -21,6 +21,12 @@ Rails.application.routes.draw do
     get 'carotte_validation', on: :member
   end
 
+  resources 'shop', controller: 'fun_cards', only: [:index, :show] do
+    resources :consommations, only: :create
+  end
+  # get 'shop', to: 'fun_cards#index'
+  # get 'shop/:id', to: 'fun_cards#show', as: :shop_fun_card
+  # post 'shop/:id/buy', to: 'consommations#buy', as: :buy_fun_card
 
 end
 
