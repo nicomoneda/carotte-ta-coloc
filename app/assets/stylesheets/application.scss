@@ -16,6 +16,7 @@
 @import "components/task_image";
 @import "components/actions";
 @import "components/carot";
+@import "components/carotted";
 @import "pages/index";
 
 
@@ -31,4 +32,5 @@ p {
 
 body {
   margin-bottom: 89px;
+  position: relative;
 }
