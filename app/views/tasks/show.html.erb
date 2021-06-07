@@ -1,24 +1,23 @@
 <div class="container">
 
   <div class="show_task_image">
-    <p><%= image_tag @task.image, alt: 'task_image', class: 'task_image_small'%></p>
+    <p><%= image_tag @task.image, alt: 'task_image', class: 'task_image_large'%></p>
   </div>
 
+  <p class="show_task_name"><%= @task.name %></p>
+  <p class="show_task_description"><%= "\"#{@task.description}\"" %></p>
+  <p class="show_task_points"> Gain : <%= @task.points %></p>
 
-  <p><%= @task.name %></p>
-  <p class="font-italic"><%= "\"#{@task.description}\"" %></p>
-  <p><%= @task.points %></p>
+    <div class="submit_btn_show">
 
-    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-      <div class="btn-group mr-2" role="group" aria-label="First group">
-        <%= link_to  icon('fas', 'check'), edit_user_task_path(@task.current_user_task),  class: "btn btn-success text-white btn-block"%>
+      <div>
+        <%= link_to icon('fas', 'check'), edit_user_task_path(@task.current_user_task),  class: "btn-check"%>
       </div>
 
-      <div class="btn-carot" class="btn-group mr-2" role="group" aria-label="First group">
-        <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#exampleModal">
-          <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
-        </button>
+      <div>
+        <%= link_to image_tag('carotte_sans_rond.png'), tasks_path, "data-toggle" => "modal", 'data-target' => '#exampleModal', class:"btn-carot carot-x-large" %>
       </div>
+
     </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
