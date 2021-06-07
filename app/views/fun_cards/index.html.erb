@@ -9,13 +9,16 @@
     <div class="my_tasks">
       <div class="task_card">
         <div class="task_card_content">
-          <%# <%= image_tag fun_card.image, alt: 'fun_card_image', class: 'task_image_small'%>
-        </div>
-        <div class="task_card_text">
-          <p class="task_name"><%= fun_card.description %></p>
-          <div class="task_points">
-            <p><%= fun_card.points %>
-            <%= image_tag 'carotte.png', alt: 'carrot_image', class: 'carot' %></p>
+          <div>
+            <%= image_tag fun_card.image, alt: 'fun_card_image', class: 'task_image_small'%>
+          </div>
+          <div class="task_card_text">
+            <p class="task_name"><%= fun_card.name %></p>
+            <div class="task_points">
+              <p><%= fun_card.points %>
+              <%= image_tag 'carotte.png', alt: 'carrot_image', class: 'carot' %>
+              </p>
+            </div>
           </div>
         </div>
         <div class="see_more">
