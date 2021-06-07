@@ -1,0 +1,10 @@
+<h1><%= @fun_card.name %></h1>
+<p><%= @fun_card.description %> - <%= @fun_card.points %></p>
+
+  <%= simple_form_for @consommation, url: shop_consommations_path(@fun_card), method: "post" do |f| %>
+    <%= f.input :week_on, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.button :submit, "Buy this card", class: "btn-show" %>
+  <% end %>
+
+<%= link_to "Buy this card", shop_consommations_path(@fun_card), method: :post %>
+<%= link_to "Back to shop", shop_index_path %>

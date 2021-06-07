@@ -1,6 +1,9 @@
 Task.destroy_all
 User.destroy_all
 Coloc.destroy_all
+FunCard.destroy_all
+Consommation.destroy_all
+
 dream_coloc = Coloc.create(name: "dreamteam")
 
 
