@@ -1,19 +1,20 @@
 <div class="tab-bar">
   <div class="tab_elements">
     <%= link_to image_tag('coloc.png'), root_path, class:"icon"%>
+    <p>Tach'Board</p>
   </div>
 
   <div class="tab_elements">
-    <%= link_to image_tag('shop.png'), class:"icon"%>
-  </div>
-
-  <div class="tab_elements">
-      <div class="navbar-toggle-collapse" id="navbarSupportedContent">
+      <div>
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="current-points">
+        <div>
+          <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot'%>
+        </div>
+        <div>
           <%= current_user.current_points %>
-          <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
+        </div>
         </li>
       <% else %>
         <li class="nav-item">
@@ -22,5 +23,11 @@
       <% end %>
     </ul>
   </div>
+  </div>
+    <div class="tab_elements">
+    <div class="tab_image">
+      <%= link_to image_tag('shop.png'), class:"icon"%>
+    </div>
+    <p>Shop</p>
   </div>
 </div>
