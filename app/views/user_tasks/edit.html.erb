@@ -1,9 +1,8 @@
 <div class="container">
-  <h1 class="title">Mark your task as done</h1>
+  <h4 class="title">Mark your task as done</h4>
   <br>
     <div class="tasks_done">
       <%= simple_form_for(@user_task, url: mark_as_done_user_task_path(@user_task)) do |f| %>
-        <%= f.input :status %>
         <%= f.input :photo, as: :file %>
         <%= f.submit %>
       <% end %>
