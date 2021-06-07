@@ -4,9 +4,10 @@
 <p><%= @task.description %></p>
 <p><%= @task.points %></p>
 
-<div>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   <%= link_to 'Mark a task as done', edit_user_task_path(@task.current_user_task)%>
-</div>
+</button>
 
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
   Je carotte mon coloc !
