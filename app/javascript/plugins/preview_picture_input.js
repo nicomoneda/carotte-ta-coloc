@@ -1,0 +1,13 @@
+const initPictureInput = () => {
+  const input = document.querySelector('#user_task_photo')
+
+  if(input) {
+    input.addEventListener('input', (event) => {
+  const url = URL.createObjectURL(event.target.files[0])
+  console.log(url)
+  document.querySelector(".preview_img").src = url
+  });
+}
+}
+
+export { initPictureInput };
