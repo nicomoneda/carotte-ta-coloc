@@ -1,8 +1,9 @@
 <h4 class="title">Tach'Board</h4>
 
-<h4>GROSSES CAROTTES MAGGLE</h4>
+
 <div>
-  <% if current_user.consommations %>
+  <% unless current_user.consommations == [] %>
+    <h4>GROSSES CAROTTES MAGGLE</h4>
     <%= current_user.consommations.last.fun_card.name %> - <%= current_user.consommations.last.week_on %>
   <% end %>
   
