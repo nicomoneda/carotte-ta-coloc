@@ -1,9 +1,12 @@
-<h1>Mark your task as done</h1>
-
-<%= simple_form_for(@user_task, url: mark_as_done_user_task_path(@user_task)) do |f| %>
-  <%= f.input :status %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit %>
-<% end %>
-
-<%= link_to 'Go to home', root_path, class:"btn-ghost-small"%>
+<div class="container">
+  <h4 class="title">Mark your task as done</h4>
+  <br>
+    <div class="tasks_done">
+      <%= simple_form_for(@user_task, url: mark_as_done_user_task_path(@user_task)) do |f| %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit %>
+      <% end %>
+      <br>
+      <%= link_to 'Go to home', root_path, class:"btn_home"%>
+    </div>
+</div>

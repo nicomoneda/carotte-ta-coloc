@@ -1,1 +1,17 @@
 // Specific CSS for your home-page
+.my_task_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  background: #4481AD;
+  height: 55px;
+  margin:0;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

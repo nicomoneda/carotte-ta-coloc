@@ -20,6 +20,13 @@
 @import "pages/index";
 
 
+// Show tasks
+@import "components/task_show";
+
+// Show form mark tasks as done
+@import "components/_form_task_done";
+
+
 h4 {
   margin: 24px 12px;
   font-family: 'Source Sans Pro';
@@ -31,6 +38,6 @@ p {
 }
 
 body {
-  margin-bottom: 89px;
   position: relative;
+  margin-bottom: 105px;
 }
