@@ -23,11 +23,11 @@ Task.create(coloc: dream_coloc,  name: "Passer l'aspi" , description: "Même sou
 Task.create(coloc: dream_coloc,  name: "Sortir les poubelles" , description: "Pense au tri mskn", points: 15, carotte_card_name: "joker", carotte_card_points: 25, image: 'poubelle.png', image_done: 'poubelle_verre.png')
 
 
-FunCard.create(name: "Dégagez !",       description: "Tout le monde dehors, l'appart est à moi !", points: 250)
-FunCard.create(name: "APEROOOOOO",      description: "C'est l'apéro ! Let's go !", points: 150)
-FunCard.create(name: "Enlevez-vous du WiFi ce soir",     description: "Flemme que ça beug", points: 100)
-FunCard.create(name: "À moi la télé !",     description: "Ptit film pour ce soir", points: 90)
-FunCard.create(name: "Meilleure place dans le canap'",     description: "Désolé les gars, mais ce soir j'suis allongé", points: 70)
+FunCard.create(name: "Dégagez !",       description: "Tout le monde dehors !", points: 250, image: 'good_bye.png')
+FunCard.create(name: "APEROOOOOO",      description: "C'est l'apéro ! Let's go !", points: 150, image: 'apero_time.png')
+FunCard.create(name: "Enlevez-vous du WiFi ce soir",     description: "Flemme que ça beug", points: 100, image: 'stop_wifi.png')
+FunCard.create(name: "À moi la télé !",     description: "Ptit film pour ce soir", points: 90, image: 'tv.png')
+FunCard.create(name: "Meilleure place dans le canap'",     description: "Désolé les gars, mais ce soir j'suis allongé", points: 70, image: 'couch_seat.png')
 
 
 FunCard.create(name: "Virer un coloc'",     description: "La sentence est irrévocable", points: 1000)
