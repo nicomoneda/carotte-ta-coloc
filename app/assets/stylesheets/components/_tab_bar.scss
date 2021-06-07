@@ -7,7 +7,7 @@
     right: 0px;
     width: 100%;
     background-color: white;
-    padding: 12px 0px;
+    padding: 5px 0px;
 }
 
 .tab_elements {
@@ -15,10 +15,23 @@
 }
 
 .tab_elements p {
-  font-size: 16px;
+  font-size: 12px;
   margin: 0px;
+  color: #4481AD;
 }
 
 .tab_elements img {
   width: 55px;
 }
+
+.current-points {
+  color: #E66F3E;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+
+.navbar-nav {
+  margin-top: -40px;
+}
+

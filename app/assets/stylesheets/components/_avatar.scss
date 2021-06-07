@@ -6,6 +6,12 @@
   width: 56px;
   border-radius: 50%;
 }
+
+.avatar-x-large {
+  width: 188px;
+  border-radius: 50%;
+}
+
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
@@ -24,5 +30,9 @@
   border-radius: 50%;
   position: absolute;
   right: 0px;
-  top: 0px;
+  bottom: 10px;
+}
+
+.carotted_avatar {
+  text-align: center;
 }
