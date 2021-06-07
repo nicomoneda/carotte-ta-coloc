@@ -1,9 +1,30 @@
 <div class="container">
-  <h1>Vous avez carotté :</h1>
 
-  <%= @carotted_user %>
+  <div class="carott_card">
+    <h4 class="carotted_title"> <strong> Bravo ! </strong><br> Vous avez carotté :</h4>
+      <div class="carotted_avatar">
+        <p><%= image_tag @carotted_user.first.avatar, class: 'avatar-x-large' %></p>
+      </div>
+     <h4 class="carotted_user_name"><%= @carotted_user.first.name %></h4>
+  </div>
+
+   <div class="overlay">
+
+     <h4 class="overlay_carot_title">Carottes Restantes : </h4>
+
+     <div class="overlay_points">
+
+       <div id="value" data-end-number="<%= @old_points.to_i - @task.carotte_card_points %>" >
+        <p><%= @old_points %></p>
+      </div>
+
+      <div>
+        <p><%= image_tag 'carotte_sans_rond.png', class:"carot-large" %></p>
+      </div>
+
+     </div>
+
+   </div>
+
 </div>
 
-<div id="value" data-end-number="<%= @old_points.to_i - @task.carotte_card_points %>" >
-  <%= @old_points %>
-</div>

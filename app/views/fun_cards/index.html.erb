@@ -1,0 +1,30 @@
+<h4 class="title">Carotte Shop</h4>
+<div class="container">
+    <div class="my_task_title">
+      <div>
+        <h4 class="current_task_title">Carotte Cards à acheter</h4>
+      </div>
+    </div>
+    <% @fun_cards.each do |fun_card| %> 
+    <div class="my_tasks">
+      <div class="task_card">
+        <div class="task_card_content">
+          <div>
+            <%= image_tag fun_card.image, alt: 'fun_card_image', class: 'task_image_small'%>
+          </div>
+          <div class="task_card_text">
+            <p class="task_name"><%= fun_card.name %></p>
+            <div class="task_points">
+              <p><%= fun_card.points %>
+              <%= image_tag 'carotte.png', alt: 'carrot_image', class: 'carot' %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="see_more">
+          <%= link_to '<i class="fas fa-chevron-right"></i>'.html_safe, shop_path(fun_card), class:'task_card_see_more' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

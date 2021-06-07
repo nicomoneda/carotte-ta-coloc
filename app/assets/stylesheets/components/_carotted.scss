@@ -1,0 +1,87 @@
+.carotted_title {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #8BB1CC;
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.carotted_user_name {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #4481AD;
+  border: 2px solid #4481AD;
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-align: center;
+  background-color: white;
+}
+
+
+.new_points {
+  display: flex;
+    text-align: center;
+    align-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#value {
+  font-size: 61px;
+  padding-right: 18px;
+  color: #4481AD;
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+
+
+
+.overlay {
+  background-color: #FA706E;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+    .overlay_points {
+      display: flex;
+      background-color: white;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      padding: 16px 32px;
+      justify-content: center;
+      align-items: center;
+    }
+    .overlay_carot_title {
+      margin-top: -149px;
+      margin-bottom: 134px;
+      font-size: 22px;
+      text-transform: uppercase;
+      color: #8BB1CC;
+      background-color: white;
+      padding: 8px 16px;
+      border-radius: 25px;
+      text-align: center;
+    }
+
+}
+
+.fade-out {
+      transform: translateX(400px);
+      transition: transform 500ms ease-in-out 70ms;
+    }
+
+.carott_card {
+  margin-top: 152px;
+}

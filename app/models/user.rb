@@ -12,4 +12,8 @@ class User < ApplicationRecord
   has_many :user_tasks, dependent: :destroy
 
   has_many :tasks, through: :user_tasks
+
+  has_many :consommations, dependent: :destroy
+
+  has_many :fun_cards, through: :consommations
 end

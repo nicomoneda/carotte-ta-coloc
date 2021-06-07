@@ -1,7 +1,7 @@
 class ConsommationsController < ApplicationController
+  before_action :set_fun_card
 
-  def buy
-    @fun_card = FunCard.find(params[:id])
+  def create
     @user = current_user
 
     if @user.current_points >= @fun_card.points
@@ -22,8 +22,12 @@ class ConsommationsController < ApplicationController
 
   private
 
+  def set_fun_card
+    @fun_card = FunCard.find(params[:shop_id])
+  end
+
   def conso_params
-    params.require(:consommations).permit(:week_on)
+    params.require(:consommation).permit(:week_on)
   end
 
 end

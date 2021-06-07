@@ -1,20 +1,24 @@
 <div class="container">
 
   <div class="show_task_image">
-    <p><%= image_tag @task.image, alt: 'task_image', class: 'task_image_small'%></p>
+    <p><%= image_tag @task.image, alt: 'task_image', class: 'task_image_large'%></p>
   </div>
 
+  <p class="show_task_name"><%= @task.name %></p>
+  <p class="show_task_description"><%= "\"#{@task.description}\"" %></p>
+  <p class="show_task_points"> Gain : <%= @task.points %></p>
 
-  <p><%= @task.name %></p>
-  <p><%= @task.description %></p>
-  <p><%= @task.points %></p>
+    <div class="submit_btn_show">
 
-  <div class="buttons_show_task">
-    <%= link_to 'Mark a task as done', edit_user_task_path(@task.current_user_task), class: "btn btn-info text-white btn-block"%>
+      <div>
+        <%= link_to icon('fas', 'check'), edit_user_task_path(@task.current_user_task),  class: "btn-check"%>
+      </div>
 
-    <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#exampleModal">
-      Je carotte mon coloc !
-    </button>
+      <div>
+        <%= link_to image_tag('carotte_sans_rond.png'), tasks_path, "data-toggle" => "modal", 'data-target' => '#exampleModal', class:"btn-carot carot-x-large" %>
+      </div>
+
+    </div>
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -34,7 +38,6 @@
         </div>
       </div>
     </div>
-  </div>
 
   <div>
     <p class="carotte_cost">Carotte cost : <%= @task.carotte_card_points %></p>
