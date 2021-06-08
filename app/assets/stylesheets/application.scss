@@ -28,17 +28,5 @@
 @import "pages/_form_task_done";
 
 
-h4 {
-  margin: 24px 12px;
-  font-family: 'Source Sans Pro';
-  font-weight: 600;
-}
-
-p {
-  font-family: 'Open Sans';
-}
-
-body {
-  position: relative;
-  margin-bottom: 105px;
-}
+// Modal center
+@import "components/modal"
