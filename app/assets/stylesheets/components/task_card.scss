@@ -30,6 +30,10 @@
   height: 114px;
 }
 
+.my_tasks:focus {
+  text-decoration: none;
+}
+
 .my_task_done {
   background-color: rgba(109, 153, 189, 0.7);
   padding: 12px;
