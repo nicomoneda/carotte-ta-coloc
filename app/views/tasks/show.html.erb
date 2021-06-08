@@ -1,3 +1,5 @@
+  <h4 class="title"> TÂCHE EN COURS </h4>
+
 <div class="container">
 
   <div class="show_task_image">
@@ -6,40 +8,43 @@
 
   <p class="show_task_name"><%= @task.name %></p>
   <p class="show_task_description"><%= "\"#{@task.description}\"" %></p>
-  <p class="show_task_points"> Gain : <%= @task.points %></p>
 
     <div class="submit_btn_show">
 
-      <div>
+      <div class="submit_icon">
         <%= link_to icon('fas', 'check'), edit_user_task_path(@task.current_user_task),  class: "btn-check"%>
+        <%= link_to image_tag('carotte_b_fo.png'), tasks_path, "data-toggle" => "modal", 'data-target' => '#exampleModal', class:"carot_show" %>
       </div>
 
-      <div>
-        <%= link_to image_tag('carotte_sans_rond.png'), tasks_path, "data-toggle" => "modal", 'data-target' => '#exampleModal', class:"btn-carot carot-x-large" %>
+      <div class="points">
+        <p class="show_task_points"> + <%= @task.points %></p>
+        <p class="show_task_points last"> - <%= @task.carotte_card_points %></p>
       </div>
 
     </div>
 
+    <!-- <div class="submit_btn_show ">
+
+      <p class="show_task_points"> + <%= @task.points %></p>
+      <p class="show_task_points last"> - <%= @task.carotte_card_points %></p>
+
+    </div> -->
+
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Je carotte mon coloc !</h5>
+          <div class="modal-body text-center">
+            Je <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %> mon coloc !
+          </div>
+          <div class="modal-footer text justify-content-center">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-          </div>
-          <div class="modal-body">
-            Je carotte mon coloc !
-          </div>
-          <div class="modal-footer">
-            <%= link_to "Oui!", carotte_user_task_path(@task.current_user_task), method: :post %>
+            <%= link_to icon('fas', 'check'), carotte_user_task_path(@task.current_user_task), method: :post, class:'btn-check-modal' %>
           </div>
         </div>
       </div>
     </div>
 
-  <div>
-    <p class="carotte_cost">Carotte cost : <%= @task.carotte_card_points %></p>
-  </div>
+
 </div>

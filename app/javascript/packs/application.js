@@ -11,6 +11,8 @@ require("channels")
 import { initMarkAsDone } from '../plugins/LottieAnimation.js';
 import { animateValue } from '../plugins/numbers_animate.js';
 import { initPictureInput } from '../plugins/preview_picture_input.js';
+import { initViewBtnUpload } from '../plugins/view_btn_upload.js';
+import { initFlatpickr } from "../plugins/flatpickr";
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -27,7 +29,6 @@ import { initPictureInput } from '../plugins/preview_picture_input.js';
 
 // External imports
 import "bootstrap";
-import { initFlatpickr } from "../plugins/flatpickr";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -37,4 +38,5 @@ document.addEventListener('turbolinks:load', () => {
   animateValue()
   initPictureInput()
   initFlatpickr()
+  initViewBtnUpload()
 });

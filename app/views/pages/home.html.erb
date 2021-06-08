@@ -1,5 +1,5 @@
 
-<h4 class="title">Tach'Board</h4>
+<h4 class="title">TACH'BOARD</h4>
 
 
 <div>
@@ -15,9 +15,7 @@
     <div>
       <h4 class="current_task_title">Mes tâches en cours</h4>
     </div>
-    <div>
-      <%= image_tag current_user.avatar, class: 'avatar'%>
-    </div>
+
   </div>
     <% @my_tasks_current_week.each do |my_task| %>
       <div class="my_tasks">
@@ -71,7 +69,7 @@
                 <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
               </p>
             </div>
-              <p><%= image_tag other_task.current_user_task.user.avatar, alt: 'task_image', class: 'avatar_card' %></p>
+              <p><%= image_tag other_task.current_user_task.user.avatar, alt: 'task_image', class: 'avatar_home' %></p>
         </div>
       </div>
     </div>

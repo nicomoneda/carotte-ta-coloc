@@ -2,8 +2,10 @@
   color: white;
   font-size: 50px;
   background-color: #008A61;
-  padding: 14px 18px;
+  padding: 10px 18px;
   border-radius: 50%;
+  width: 89px;
+  height: 89px;
 }
 
 .btn-carot {
@@ -20,7 +22,21 @@
 }
 
 .submit_btn_show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 36px;
+    width: 70%;
+}
+
+.submit_btn_show img {
+  width: 89px;
+}
+
+.submit_icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
