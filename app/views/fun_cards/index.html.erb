@@ -6,14 +6,14 @@
       </div>
     </div>
     <% @fun_cards.each do |fun_card| %> 
-    <div class="my_tasks">
+    <div class="fun_cards">
       <div class="task_card">
-        <div class="task_card_content">
-          <div>
+        <div class="fun_card_content">
+          <div class="fun_card_image">
             <%= image_tag fun_card.image, alt: 'fun_card_image', class: 'task_image_small'%>
           </div>
-          <div class="task_card_text">
-            <p class="task_name"><%= fun_card.name %></p>
+          <div class="fun_card_text">
+            <p class="fun_card_name"><%= fun_card.name %></p>
             <div class="task_points">
               <p><%= fun_card.points %>
               <%= image_tag 'carotte.png', alt: 'carrot_image', class: 'carot' %>
