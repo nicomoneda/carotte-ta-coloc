@@ -1,0 +1,50 @@
+.carotte_incoming {
+  width: 100%;
+}
+
+.carotte_incoming_title {
+  text-transform: uppercase;
+  text-align: center;
+  color: #8BB1CC;
+}
+
+.carotte_incoming_content {
+  background-color: rgba(254, 203, 100, 0.7);
+  display: flex;
+  padding: 16px;
+  border-radius: 16px;
+  height: 114px;
+  position: relative;
+}
+
+.carotte_incoming_image {
+  width: 90px;
+}
+
+.carotte_incoming_text {
+  width: 100%;
+  margin-left: 16px;
+}
+
+.carotte_incoming_infos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  p {
+    margin-bottom: 0;
+    color: white;
+    font-weight: 700;
+  }
+}
+
+.carotte_incoming_date {
+  margin-top: 4px;
+  width: 100%;
+  p {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+  }
+}
