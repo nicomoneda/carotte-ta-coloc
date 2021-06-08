@@ -23,12 +23,6 @@
 
     </div>
 
-    <!-- <div class="submit_btn_show ">
-
-      <p class="show_task_points"> + <%= @task.points %></p>
-      <p class="show_task_points last"> - <%= @task.carotte_card_points %></p>
-
-    </div> -->
     <% if current_user.current_points >= @task.carotte_card_points %>
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">

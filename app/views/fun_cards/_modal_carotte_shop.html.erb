@@ -1,0 +1,27 @@
+<!-- Modal -->
+<div class="modal fade" id="modalCarotte<%= fun_card.id %>" tabindex="-1" role="dialog" aria-labelledby="modalCarotte<%= fun_card.id %>Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCarotte<%= fun_card.id %>Label">A quelle date souhaites-tu carroter tes colocs ?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <% if current_user.current_points >= fun_card.points %>
+          <div class="center-button">
+            <%= simple_form_for Consommation.new, url: shop_consommations_path(fun_card), method: "post" do |f| %>
+              <%= f.input :week_on, as: :string, required: false, input_html: {class: "datepicker"} %>
+              <%= f.button :submit, "Je carotte !", class: "btn-fun-card" %>
+            <% end %>
+          </div>
+        <% else %>
+          <div class="fun_card_less_points">
+            <p>Tu n'as pas assez de points pour acheter cette carte</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

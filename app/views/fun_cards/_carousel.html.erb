@@ -1,3 +1,4 @@
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   
   <div class="carousel-inner">
@@ -14,6 +15,10 @@
           <div>
             <%= fun_card.points %>
           </div>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCarotte<%= fun_card.id %>">
+            J'achète cette carotte
+          </button>
+          <%= render 'modal_carotte_shop', fun_card: fun_card %>
       </div>
     <% end %>
   </div>
