@@ -55,8 +55,12 @@
               </p>
             </div>
           </div>
+          <div>
+            <% if my_task.current_user_task.status == false%>
+              <i class="fas fa-chevron-right task_card_see_more"></i>
+            <% end %>
+          </div>
         </div>
-
       </div>
     <% if my_task.current_user_task.status %>
       </div>
