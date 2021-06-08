@@ -85,3 +85,12 @@
 .carott_card {
   margin-top: 152px;
 }
+
+.current-points {
+  transition: all 1000ms cubic-bezier(0.79, 0.33, 0.14, 0.53) 70ms, scale 300ms ease-in-out 70ms;
+}
+
+.go_up {
+  transform: translateY(-320px) scale(2);
+  color: white;
+}

@@ -36,6 +36,7 @@ class UserTasksController < ApplicationController
   def carotte_validation
     @carotted_user = User.where(name: params[:username])
     @old_points = params[:old_points]
+    @display_animation = true
 
   end
 
