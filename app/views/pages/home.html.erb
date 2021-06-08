@@ -15,18 +15,28 @@
     <div>
       <h4 class="current_task_title">Mes tâches en cours</h4>
     </div>
-
   </div>
+
+
+
     <% @my_tasks_current_week.each do |my_task| %>
-      <div class="my_tasks">
+
+      <% if my_task.current_user_task.status %>
+        <div class="my_tasks">
+      <% else %>
+        <a href="<%= task_path(my_task) %>" class="my_tasks">
+      <% end %>
+
+
+
       <div class="task_card">
         <div class="task_card_content">
           <div>
-              <% if my_task.current_user_task.status == false %>
-                <%= image_tag my_task.image, alt: 'task_image', class: 'task_image_small' %>
-              <% else %>
-                <%= image_tag my_task.image_done, class: "task_image_small"  %>
-              <% end %>
+            <% if my_task.current_user_task.status == false %>
+              <%= image_tag my_task.image, alt: 'task_image', class: 'task_image_small' %>
+            <% else %>
+              <%= image_tag my_task.image_done, class: "task_image_small"  %>
+            <% end %>
           </div>
 
           <div class="task_card_text">
@@ -39,18 +49,16 @@
           </div>
         </div>
 
-        <div class="see_more">
-          <% if my_task.current_user_task.status == false %>
-            <%= link_to '<i class="fas fa-chevron-right"></i>'.html_safe, task_path(my_task), class:'task_card_see_more' %>
-          <% else %>
-            <%=   %>
-          <% end %>
-        </div>
-    </div>
-  </div>
+
+      </div>
+    <% if my_task.current_user_task.status %>
+      </div>
+    <% else %>
+      </a>
+    <% end %>
     <% end %>
 
-    <hr>
+  <hr>
 
   <h4 class="current_task_title"> Les tâches des colocs'</h4>
 
