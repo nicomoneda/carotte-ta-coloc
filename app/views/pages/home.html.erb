@@ -32,12 +32,10 @@
     <% @my_tasks_current_week.each do |my_task| %>
 
       <% if my_task.current_user_task.status %>
-        <div class="my_tasks">
+        <div class="my_task_done">
       <% else %>
         <a href="<%= task_path(my_task) %>" class="my_tasks">
       <% end %>
-
-
 
       <div class="task_card">
         <div class="task_card_content">
@@ -58,7 +56,6 @@
             </div>
           </div>
         </div>
-
 
       </div>
     <% if my_task.current_user_task.status %>
