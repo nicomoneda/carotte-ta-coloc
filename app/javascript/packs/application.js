@@ -11,6 +11,8 @@ require("channels")
 import { initMarkAsDone } from '../plugins/LottieAnimation.js';
 import { animateValue } from '../plugins/numbers_animate.js';
 import { initPictureInput } from '../plugins/preview_picture_input.js';
+import { initViewBtnUpload } from '../plugins/view_btn_upload.js';
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -35,4 +37,5 @@ document.addEventListener('turbolinks:load', () => {
   initMarkAsDone()
   animateValue()
   initPictureInput()
+  initViewBtnUpload()
 });
