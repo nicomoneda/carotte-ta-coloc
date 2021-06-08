@@ -3,8 +3,10 @@ const initViewBtnUpload = () => {
 
   if(input) {
     const submit = document.querySelector('.input_btn')
+    const text = document.querySelector('.upload_photo_text')
     input.addEventListener('change', (event) => {
     submit.classList.add('view_btn')
+    text.classList.add('hide_text')
   });
 }
 }
