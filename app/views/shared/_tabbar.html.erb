@@ -15,7 +15,7 @@
           <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot'%>
         </div>
 
-        <div id="my_carrots" data-end-number="<% @old_points.to_i %>">
+        <div id="my_carrots" data-start-number="<%= @old_points.nil? ? current_user.current_points : @old_points %>" data-end-number="<%= current_user.current_points %>">
           <%= current_user.current_points %>
         </div>
         </li>

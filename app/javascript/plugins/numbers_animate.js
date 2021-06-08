@@ -6,12 +6,16 @@ function animateValue() {
   if (!counter)
     return
 
-  const start = parseInt(counter.innerText);
+  const start = parseInt(counter.dataset.startNumber);
   const end = parseInt(counter.dataset.endNumber);
 
 
+  console.log(start)
+  console.log(end)
+
+
   if (div.classList.contains('go_up')) {
-  // div.classList.add('go_up');
+    // div.classList.add('go_up');
     setTimeout(() => { div.classList.remove('go_up'); }, 3900);
 
     if (start === end) return;
