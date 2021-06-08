@@ -5,7 +5,7 @@
 }
 
 .show_task_image {
-    margin-top: 10px;
+    margin-top: 62px;
 }
 
 .carotte_cost {
@@ -27,6 +27,7 @@
     padding-left: 14px;
 }
 
+<<<<<<< HEAD
 .modal {
     text-align: center;
   }
@@ -39,3 +40,60 @@
     flex-direction: column;
     justify-content: center;
   }
+=======
+.show_task_name {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  color: #4481AD;
+  font-weight: 600;
+  margin-bottom: 21px;
+  font-family: 'Open Sans';
+  margin-top: 15px;
+}
+
+.show_task_description {
+  font-style: italic;
+  font-family: 'Source Sans Pro';
+  font-size: 19px;
+  text-align: center;
+  color: #4481AD;
+}
+
+.show_task_points {
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 17px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 0px 30px 0px;
+  font-family: 'Source Sans Pro';
+  font-size: 21px;
+  margin-top: 17px;
+  border: solid 2px green;
+  color: green;
+}
+
+.btn-fun-card {
+    background-color: #FECB64;
+    width: auto;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.center-button {
+    form {
+        display: grid;
+    }
+}
+
+.points {
+  display: inline-flex;
+}
+
+.last {
+  margin-left: 90px;
+  border: solid 2px #E46E0E;
+  color: #E46E0E;
+}
+>>>>>>> f2d3fec11317de4b3ecbf24971ad0315b2eaa9a3
