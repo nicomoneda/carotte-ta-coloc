@@ -6,10 +6,16 @@
   <p><%= @fun_card.description %></p>
   <p><%= @fun_card.points %> <%= image_tag 'carotte.png', alt: 'carrot_image', class: 'carot' %></p>
 
-  <div class="center-button">
-    <%= simple_form_for @consommation, url: shop_consommations_path(@fun_card), method: "post" do |f| %>
-      <%= f.input :week_on, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.button :submit, "Buy this card", class: "btn-fun-card" %>
-    <% end %>
-  </div>
+  <% if current_user.current_points >= @fun_card.points %>
+    <div class="center-button">
+      <%= simple_form_for @consommation, url: shop_consommations_path(@fun_card), method: "post" do |f| %>
+        <%= f.input :week_on, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.button :submit, "Buy this card", class: "btn-fun-card" %>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="fun_card_less_points">
+      <p>Tu n'as pas assez de points pour acheter cette carte</p>
+    </div>
+  <% end %>
 </div>
