@@ -4,17 +4,14 @@
   background-color: #008A61;
   padding: 13px 18px;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
 }
 
 .btn-carot {
   color: white;
   font-size: 50px;
-  background-color: #E46E0E;
-  padding: 14px 28px;
+  background-color: #FF665A;
+  padding: 14px 24px;
   border-radius: 50%;
-  margin-left: 66px;
 }
 
 .btn_form {
@@ -26,12 +23,9 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 36px;
-    width: 70%;
+    width: 82%;
 }
 
-.submit_btn_show img {
-  width: 89px;
-}
 
 // .submit_icon {
 //   display: flex;
@@ -47,8 +41,8 @@
     padding: 32px 16px;
     border-radius: 25px;
     height: 180px;
-    width: 121px;
-    margin-right: 17px;
+    width:122px;
+    position: relative;
 
     p {
      margin-top: 22px;
@@ -56,23 +50,26 @@
      font-size: 25px;
      font-family: 'Open Sans';
      font-weight: 600;
-
+      margin-right: 25px;
     }
 }
 
 .icon_carot {
     text-align: center;
-    border: 2px solid #E46E0E;
+    border: 2px solid #FF665A;
     background-color: white;
-    padding: 24px 16px;
+    padding: 32px 16px;
     border-radius: 25px;
     height: 180px;
+    width:122px;
+    position: relative;
 
     p {
-      margin-top: 15px;
-      color: #E46E0E;
+      margin-top: 22px;
+      color: #FF665A;
       font-size: 25px;
-     font-family: 'Open Sans';
-     font-weight: 600;
+      font-family: 'Open Sans';
+      font-weight: 600;
+      margin-right: 25px;
     }
 }

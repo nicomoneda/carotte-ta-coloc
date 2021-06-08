@@ -1,7 +1,7 @@
 
 <h4 class="title">TACH'BOARD</h4>
 
-<div class="container">
+<div class="container-small">
     <div class="carotte_incoming">
       <% unless current_coloc.consommations == [] %>
       <% first_conso = current_coloc.consommations.where('week_on >= CURRENT_DATE').order(:week_on).first %>
@@ -23,7 +23,7 @@
 
   <div class="my_task_title">
     <div>
-      <h4 class="current_task_title">Mes tâches en cours</h4>
+      <h4 class="current_task_title">Mes tâches de la semaine</h4>
     </div>
   </div>
 
@@ -65,12 +65,9 @@
     <% end %>
     <% end %>
 
-  <hr>
-
   <h4 class="current_task_title"> Les tâches des colocs'</h4>
 
   <% @other_tasks_current_week.each do |other_task| %>
-  <div class="other_tasks">
     <div class="task_card">
       <div class="task_card_content">
         <div>
@@ -78,7 +75,7 @@
         </div>
 
         <div class="task_card_text">
-          <p><%= other_task.name %></p>
+          <p class="task_name"><%= other_task.name %></p>
             <div class="task_points">
               <p><%= other_task.points %>
                 <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
@@ -88,6 +85,5 @@
         </div>
       </div>
     </div>
-  </div>
   <% end %>
 </div>

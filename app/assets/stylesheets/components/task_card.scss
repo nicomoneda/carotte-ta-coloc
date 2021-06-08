@@ -1,7 +1,11 @@
 .task_card {
   position: relative;
   margin-bottom: 24px;
+  border-bottom: solid 0.1em rgba(0,0,0,0.1);
+  border-width: 0.5px;
+  padding: 0px 0px 28px 0px;
 }
+
 
 .task_card_content {
   display: flex;
@@ -11,7 +15,6 @@
 
 .task_card_text {
   width: 195px;
-  padding-left: 20px;
 }
 
 .task_card_see_more {
@@ -23,7 +26,6 @@
 }
 
 .my_tasks {
-  background-color: rgba(254, 203, 100, 0.7);
   padding: 12px;
   border-radius: 16px;
   margin-top: 8px;
@@ -48,7 +50,13 @@
 
 .current_task_title {
   text-transform: uppercase;
-  color: #8BB1CC;
+  color: white;
+  margin-bottom : 32px;
+  background-color: #8BB1CC;
+  margin: auto;
+  padding: 4px 8px;
+  width: 100%;
+
 }
 
 .task_points {
@@ -66,5 +74,6 @@
 }
 
 .task_name {
-  color: white;
+  color: rgb(109, 153, 189);
+  font-size: 18px;
 }

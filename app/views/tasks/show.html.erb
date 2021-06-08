@@ -12,13 +12,15 @@
     <div class="submit_btn_show">
 
       <div class="icon_check">
-        <%= link_to icon('fas', 'check'), edit_user_task_path(@task.current_user_task),  class: "btn-check"%>
-        <p class="show_task_points"> + <%= @task.points %></p>
+        <%= link_to icon('fas', 'check'), edit_user_task_path(@task.current_user_task), class: "btn-check"%>
+        <p class="show_task_points"> + <%= @task.points %> <%= image_tag ('carotte_sans_rond.png'), class:"carot-show" %></p>
       </div>
 
       <div class="icon_carot">
-        <%= link_to image_tag('carotte_b_fo.png'), tasks_path, "data-toggle" => "modal", 'data-target' => '#exampleModal', class:"carot_show" %>
-        <p class="show_task_points last"> - <%= @task.carotte_card_points %></p>
+        <%= link_to tasks_path, "data-toggle" => "modal", 'data-target' => '#exampleModal', class:"btn-carot" do %>
+          <i class="fas fa-times"></i>
+        <% end %>
+        <p class="show_task_points last"> - <%= @task.carotte_card_points %> <%= image_tag ('carotte_sans_rond.png'), class:"carot-show" %> </p>
       </div>
 
     </div>
