@@ -1,0 +1,30 @@
+.carotte_shop_image {
+  width: 10px;
+}
+
+#carouselExampleIndicators li{
+  background-color: grey;
+  opacity: 0.8;
+}
+
+.carousel-indicators {
+  // display: none;
+}
+
+.carousel {
+  height: 70vh;
+  width: 100%;
+}
+
+.carousel-inner {
+  text-align: center;
+}
+
+.carotte_shop_description {
+  font-style: italic;
+  font-family: 'Source Sans Pro';
+  font-size: 19px;
+  text-align: center;
+  color: #4481AD;
+  margin-bottom: 50px;
+}
