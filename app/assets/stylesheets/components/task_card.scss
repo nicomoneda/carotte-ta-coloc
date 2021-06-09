@@ -18,10 +18,10 @@
 }
 
 .task_card_see_more {
-    position: absolute;
-    right: 12px;
-    bottom: 0px;
-    font-size: 26px;
+    // position: absolute;
+    // right: 12px;
+    // bottom: 0px;
+    font-size: 32px;
     color: white;
 }
 
@@ -36,12 +36,14 @@
   text-decoration: none;
 }
 
-.my_task_done {
-  background-color: rgba(109, 153, 189, 0.7);
-  padding: 12px;
-  border-radius: 16px;
-  margin-top: 8px;
-  height: 114px;
+.task_check_align {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo_status {
+  display: flex;
+  align-items: center;
 }
 
 .other_tasks {
