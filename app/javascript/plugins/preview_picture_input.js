@@ -6,6 +6,8 @@ const initPictureInput = () => {
   const url = URL.createObjectURL(event.target.files[0])
   console.log(url)
   document.querySelector(".preview_img").src = url
+  document.querySelector(".preview_img").classList.add('bigger_img')
+  document.querySelector(".container-photo").classList.add('adapt_heigh')
   });
 }
 }
