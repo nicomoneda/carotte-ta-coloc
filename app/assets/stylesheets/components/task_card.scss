@@ -23,11 +23,9 @@
 }
 
 .task_card_see_more {
-    // position: absolute;
-    // right: 12px;
-    // bottom: 0px;
-    font-size: 32px;
-    color: white;
+    font-size: 22px;
+    color:rgb(68, 129, 173);
+    opacity: 0.7;
 }
 
 .my_tasks {
@@ -60,14 +58,24 @@
 }
 
 .current_task_title {
-  text-transform: uppercase;
-  color: white;
+  font-weight: bold;
+  color: black;
   margin-bottom : 32px;
-  background-color: #8BB1CC;
   margin: auto;
   padding: 4px 8px;
   width: 100%;
+  margin-top: -10px;
+}
 
+.coloc_task_title {
+  font-weight: bold;
+  color: black;
+  margin-bottom : 32px;
+  margin: auto;
+  padding: 4px 8px;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: -15px;
 }
 
 .task_points {
