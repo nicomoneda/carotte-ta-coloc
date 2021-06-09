@@ -1,7 +1,6 @@
 <h4 class="title">Validez votre tâche</h4>
 
 <div class="container-photo">
-  <%= link_to "Revenir à la tâche", task_path(@user_task.task), class: "back_btn" %>
   <div class="tasks_done">
     <div class="align_items">
       <%= simple_form_for(@user_task, url: mark_as_done_user_task_path(@user_task)) do |f| %>
@@ -16,6 +15,7 @@
 
         <input class="input_btn" type="submit" name="commit" value="Je valide !">
       <% end %>
+      <%= link_to "> Revenir à la tâche", task_path(@user_task.task), class: "back_btn" %>
     </div>
   </div>
 </div>
