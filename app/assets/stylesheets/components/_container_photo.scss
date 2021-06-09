@@ -1,0 +1,19 @@
+.container-photo {
+  padding: 60px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 178px);
+}
+
+.adapt_heigh {
+  height: calc(100vh - 272px);
+}
+
+.camera_img {
+  width: 224px;
+}
+
+.bigger_img {
+  width: 272px;
+}
