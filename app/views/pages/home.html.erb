@@ -3,7 +3,7 @@
 
 <div class="container-small">
     <div class="carotte_incoming">
-      <% unless current_coloc.consommations == [] %>
+      <% unless current_coloc.consommations.where('week_on >= CURRENT_DATE').empty? %>
       <% first_conso = current_coloc.consommations.where('week_on >= CURRENT_DATE').order(:week_on).first %>
       <h4 class="carotte_incoming_title">Carottes à venir</h4>
       <div class="carotte_incoming_content">
