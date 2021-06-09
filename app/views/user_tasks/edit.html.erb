@@ -1,22 +1,21 @@
 <h4 class="title">Validez votre tâche</h4>
 
 <div class="container-photo">
-    <br>
-      <div class="tasks_done">
-       <div class="align_items">
-        <%= simple_form_for(@user_task, url: mark_as_done_user_task_path(@user_task)) do |f| %>
+  <%= link_to "Revenir à la tâche", task_path(@user_task.task), class: "back_btn" %>
+  <div class="tasks_done">
+    <div class="align_items">
+      <%= simple_form_for(@user_task, url: mark_as_done_user_task_path(@user_task)) do |f| %>
 
-          <div class="form-group file optional user_task_photo" id="input_photo">
-            <label class="file optional" for="user_task_photo">
-              <%= image_tag "camera-02.png", class: "preview_img camera_img" %>
-            </label>
-            <p class="upload_photo_text">AJOUTE TA PHOTO</p>
-            <input class="form-control-file file optional" type="file" name="user_task[photo]" id="user_task_photo">
-          </div>
-
-          <input class="input_btn" type="submit" name="commit" value="Je valide !">
-          <% end %>
+        <div class="form-group file optional user_task_photo" id="input_photo">
+          <label class="file optional" for="user_task_photo">
+            <%= image_tag "camera-02.png", class: "preview_img camera_img" %>
+          </label>
+          <p class="upload_photo_text">AJOUTE TA PHOTO</p>
+          <input class="form-control-file file optional" type="file" name="user_task[photo]" id="user_task_photo">
         </div>
-        <br>
+
+        <input class="input_btn" type="submit" name="commit" value="Je valide !">
+      <% end %>
     </div>
+  </div>
 </div>
