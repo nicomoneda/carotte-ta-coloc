@@ -33,3 +33,4 @@ class ConsommationsController < ApplicationController
   end
 
 end
+
