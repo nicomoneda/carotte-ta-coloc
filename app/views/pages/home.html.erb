@@ -32,7 +32,7 @@
     <% @my_tasks_current_week.each do |my_task| %>
 
       <% if my_task.current_user_task.status %>
-        <div class="my_task_done">
+        <div>
       <% else %>
         <a href="<%= task_path(my_task) %>" class="my_tasks">
       <% end %>
@@ -49,16 +49,20 @@
 
           <div class="task_card_text">
             <p class="task_name"><%= my_task.name %></p>
-            <div class="task_points">
-              <p><%= my_task.points %>
-                <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
-              </p>
-            </div>
-          </div>
-          <div>
-            <% if my_task.current_user_task.status == false%>
-              <i class="fas fa-chevron-right task_card_see_more"></i>
-            <% end %>
+              <div class="task_check_align">
+                <div class="task_points">
+                  <p><%= my_task.points %>
+                    <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot' %>
+                  </p>
+                </div>
+                <div class="logo_status">
+                  <% if my_task.current_user_task.status == false %>
+                    <i class="fas fa-chevron-right task_card_see_more" style="color:rgb(68, 129, 173);"></i>
+                  <% else %>
+                    <i class="far fa-check-circle fa-2x" style="color:green"></i>
+                  <% end %>
+                </div>
+              </div>
           </div>
         </div>
       </div>
