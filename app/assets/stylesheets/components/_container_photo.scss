@@ -3,11 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 178px);
+  flex-direction: column;
+  height: calc(100vh - 336px);
 }
 
 .adapt_heigh {
-  height: calc(100vh - 272px);
+  height: calc(100vh - 336px);
 }
 
 .camera_img {
