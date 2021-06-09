@@ -11,9 +11,10 @@ class UserTasksController < ApplicationController
 
   def mark_as_done
     @user_task.update(status: true)
+    old_points = @user.current_points
     sum_points = @user.current_points + @task.points
     @user.update(current_points: sum_points)
-    redirect_to root_path
+    redirect_to root_path(old_points: old_points)
   end
 
   def carotte
@@ -35,9 +36,7 @@ class UserTasksController < ApplicationController
 
   def carotte_validation
     @carotted_user = User.where(name: params[:username])
-    @old_points = params[:old_points]
     @display_animation = true
-
   end
 
   private

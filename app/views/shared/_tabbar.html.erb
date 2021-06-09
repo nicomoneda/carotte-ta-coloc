@@ -11,13 +11,13 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="current-points">
-        <div>
-          <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot'%>
-        </div>
+          <div>
+            <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot'%>
+          </div>
 
-        <div id="my_carrots" data-start-number="<%= @old_points.nil? ? current_user.current_points : @old_points %>" data-end-number="<%= current_user.current_points %>">
-          <%= current_user.current_points %>
-        </div>
+          <div id="my_carrots" data-end-number="<%= current_user.current_points %>">
+            <%= params[:old_points] || current_user.current_points %>
+          </div>
         </li>
       <% else %>
         <li class="nav-item">
