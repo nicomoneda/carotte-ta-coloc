@@ -1,8 +1,8 @@
 <div class="container">
 
-  <div class="carott_card">
+  <div class="carott_card" >
     <h4 class="carotted_title"> <strong> Bravo ! </strong><br> Vous avez carotté :</h4>
-      <div class="carotted_avatar">
+      <div class="carotted_avatar" id="carot_card_select">
         <p><%= image_tag @carotted_user.first.avatar, class: 'avatar-x-large' %></p>
       </div>
      <h4 class="carotted_user_name"><%= @carotted_user.first.name %></h4>
@@ -15,4 +15,3 @@
    </div>
 
 </div>
-

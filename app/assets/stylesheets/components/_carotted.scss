@@ -92,5 +92,6 @@
 
 .go_up {
   transform: translateY(-320px) scale(2);
+  transition: transform 1200ms cubic-bezier(.99,.01,0,1.01);
   color: white;
 }
