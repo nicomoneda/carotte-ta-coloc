@@ -11,12 +11,16 @@
           <div class="carotte_shop_description">
             <%= fun_card.description %>
           </div>
-          <%= image_tag 'carotte_b_fo.png', alt: 'task_image', class: 'task_image_small' %>
-          <div>
-            <%= fun_card.points %>
+          <div class="carotte_price_and_image">
+            <div class="carotte_price">
+                <%= fun_card.points %>
+            </div>
+            <div>
+              <%= image_tag 'carotte_sans_rond.png', alt: 'task_image', class: 'carot_image' %>
+            </div>
           </div>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCarotte<%= fun_card.id %>">
-            J'achète cette carotte
+          <button type="button" class="btn" data-toggle="modal" data-target="#modalCarotte<%= fun_card.id %>">
+            Je carotte mes colocs !
           </button>
           <%= render 'modal_carotte_shop', fun_card: fun_card %>
       </div>

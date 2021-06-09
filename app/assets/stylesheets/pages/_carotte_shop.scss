@@ -4,16 +4,12 @@
 
 #carouselExampleIndicators li{
   background-color: grey;
-  opacity: 0.8;
-}
-
-.carousel-indicators {
-  // display: none;
 }
 
 .carousel {
   height: 70vh;
   width: 100%;
+  margin-top: 120px;
 }
 
 .carousel-inner {
@@ -26,5 +22,37 @@
   font-size: 19px;
   text-align: center;
   color: #4481AD;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+}
+
+.carotte_price_and_image {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  justify-content: center;
+}
+
+.carotte_price {
+  font-size: 30px;
+  color: #DD7220;
+  font-weight: 600;
+  margin-left: 35px;
+}
+
+.carot_image {
+  width: 55px;
+  margin-left: -10px;
+  margin-bottom: 5px;
+}
+
+.btn {
+  padding: .75rem 1.25rem;
+  border-radius: 10rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  z-index: 1;
+  background-color:#8BB1CC;
+  border: none;
 }
