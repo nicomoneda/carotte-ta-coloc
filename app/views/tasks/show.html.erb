@@ -30,13 +30,13 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-body text-center">
-              Je <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot_modal' %> mon coloc !
+              <span>Je</span> <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot_modal' %> <span>mon coloc !</span>
             </div>
-            <div class="modal-footer text justify-content-center">
+            <div class="modal-footer text justify-content-around">
               <button type="button" class="close fa-3x" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true", class="text-danger">&times;</span>
               </button>
-              <%= link_to icon('fas', 'check'), carotte_user_task_path(@task.current_user_task), method: :post, class:'btn-check-modal text-success'%>
+              <%= link_to icon('fas', 'check'), carotte_user_task_path(@task.current_user_task), method: :post, class:'btn-check-modal text-success fa-2x'%>
             </div>
           </div>
         </div>
@@ -46,7 +46,7 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-body text-center">
-                Mince, il me manque encore des <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot_modal' %>
+                <span>Mince, il me manque encore des</span> <%= image_tag 'carotte.png', alt: 'task_image', class: 'carot_modal' %>
               </div>
               <div class="modal-footer text justify-content-center">
                 <button type="button" class="close fa-3x" data-dismiss="modal" aria-label="Close">

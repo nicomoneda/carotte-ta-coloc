@@ -2,34 +2,32 @@
 <h4 class="title">TACH'BOARD</h4>
 
 <div class="container-small">
-      <% unless current_coloc.consommations.where('week_on >= CURRENT_DATE').empty? %>
-        <div class="carotte_a_venir">
-        <div class="carotte_incoming">
-      <% first_conso = current_coloc.consommations.where('week_on >= CURRENT_DATE').order(:week_on).first %>
-      <h4 class="carotte_incoming_title">Carottes à venir</h4>
-      <div class="carotte_incoming_content">
-        <%= image_tag first_conso.fun_card.image, alt: 'fun_card_image', class: 'carotte_incoming_image' %>
-        <div class="carotte_incoming_text">
-          <div class="carotte_incoming_infos">
-            <p><%= first_conso.fun_card.name %></p>
-            <%= image_tag first_conso.user.avatar, alt: 'user_avatar', class: 'avatar_carotte' %>
-          </div>
-          <div class="carotte_incoming_date">
-            <p><%= l first_conso.week_on %></p>
+  <% unless current_coloc.consommations.where('week_on >= CURRENT_DATE').empty? %>
+    <div class="carotte_a_venir">
+      <div class="carotte_incoming">
+        <% first_conso = current_coloc.consommations.where('week_on >= CURRENT_DATE').order(:week_on).first %>
+        <h4 class="carotte_incoming_title">Prochain évènement</h4>
+        <div class="carotte_incoming_content">
+          <%= image_tag first_conso.fun_card.image, alt: 'fun_card_image', class: 'carotte_incoming_image' %>
+          <div class="carotte_incoming_text">
+            <div class="carotte_incoming_infos">
+              <p><%= first_conso.fun_card.name %></p>
+              <%= image_tag first_conso.user.avatar, alt: 'user_avatar', class: 'avatar_carotte' %>
+            </div>
+            <div class="carotte_incoming_date">
+              <p><%= l first_conso.week_on %></p>
+            </div>
           </div>
         </div>
       </div>
-      <% end %>
     </div>
-  </div>
+  <% end %>
 
   <div class="my_task_title">
     <div class="title_my_task">
       <h4 class="current_task_title">Mes tâches de la semaine</h4>
     </div>
   </div>
-
-
 
     <% @my_tasks_current_week.each do |my_task| %>
 
@@ -39,16 +37,12 @@
         <a href="<%= task_path(my_task) %>" class="my_tasks">
       <% end %>
 
-      <div class="task_card">
+      <div class="task_card <%= 'filter_gray' if my_task.current_user_task.status == true %>">
         <div class="task_card_content">
-          <div>
-              <% if my_task.current_user_task.status == false %>
-                <%= image_tag my_task.image, alt: 'task_image', class: 'task_image_small' %>
-              <% else %>
-                  <%= image_tag my_task.image_done, class: "task_image_small"  %>
-            <% end %>
+          <div>  
+            <%= image_tag my_task.image, alt: 'task_image', class: 'task_image_small' %>
           </div>
-
+ 
           <div class="task_card_text">
             <p class="task_name"><%= my_task.name %></p>
               <div class="task_check_align">
@@ -78,7 +72,7 @@
   <h4 class="coloc_task_title"> Les tâches des colocs'</h4>
 
   <% @other_tasks_current_week.each do |other_task| %>
-    <div class="task_card">
+    <div class="task_card <%= 'filter_gray' if other_task.current_user_task.status == true %>">
       <div class="task_card_content">
         <div>
             <%= image_tag other_task.image, alt: 'task_image', class: 'task_image_small' %>

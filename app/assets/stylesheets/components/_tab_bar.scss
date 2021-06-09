@@ -22,9 +22,9 @@ border: 1px solid #4481AD;
 border-bottom: 0;
 border-left: 0;
 border-right: 0;
--webkit-animation:spin 10s linear;
--moz-animation:spin 10s linear;
-animation:spin 10s linear;
+-webkit-animation:spin 4s linear;
+-moz-animation:spin 4s linear;
+animation:spin 4s linear;
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }

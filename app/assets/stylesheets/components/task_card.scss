@@ -94,9 +94,13 @@
 
 .task_name {
   color: rgb(109, 153, 189);
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .filter_done {
+  filter: grayscale(1);
+}
+
+.filter_gray {
   filter: grayscale(1);
 }
