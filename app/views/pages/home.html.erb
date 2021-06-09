@@ -57,7 +57,9 @@
           </div>
           <div>
             <% if my_task.current_user_task.status == false%>
-              <i class="fas fa-chevron-right task_card_see_more"></i>
+              <i class="fas fa-chevron-right task_card_see_more" style="color:rgb(68, 129, 173) !important;"></i>
+            <% else %>
+              <i class="far fa-check-circle fa-3x" style="color:green"></i>
             <% end %>
           </div>
         </div>
