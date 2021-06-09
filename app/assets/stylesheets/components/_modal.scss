@@ -13,6 +13,9 @@
 
   .modal-body {
     font-size: x-large;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
   }
 
   .modal-title {
