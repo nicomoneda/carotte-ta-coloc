@@ -1,39 +1,50 @@
 .tab-bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    bottom: 0;
-    position: fixed;
-    right: 0px;
-    width: 100%;
-    background-color: white;
-    padding: 5px 0px;
-    text-transform: uppercase;
-    z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  bottom: 0;
+  position: fixed;
+  right: 0px;
+  width: 100%;
+  background-color: white;
+  padding: 5px 0px;
+  text-transform: uppercase;
+  z-index: 2;
+  border-top: 1px solid #4481AD;
+}
+
+
+.carot_tabbar {
+width: 41px;
+border-top-left-radius: 50%;  /* 100px of height + 10px of border */
+border-top-right-radius: 50%; /* 100px of height + 10px of border */
+border: 1px solid #4481AD;
+border-bottom: 0;
+border-left: 0;
+border-right: 0;
 }
 
 .tab_elements {
-  text-align: center;
+text-align: center;
 }
 
 .tab_elements p {
-  font-size: 12px;
-  margin: 0px;
-  color: #4481AD;
+font-size: 12px;
+margin: 0px;
+color: #4481AD;
 }
 
 .tab_elements img {
-  width: 55px;
+width: 55px;
 }
 
 .current-points {
-  color: #E66F3E;
-  font-weight: bold;
-  font-size: 30px;
+color: #E66F3E;
+font-weight: bold;
+font-size: 30px;
 }
 
 
 .navbar-nav {
-  margin-top: -40px;
+margin-top: -40px;
 }
-
