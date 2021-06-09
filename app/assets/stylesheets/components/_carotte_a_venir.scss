@@ -1,8 +1,14 @@
 .carotte_a_venir{
-  background-image: url("cadre.png");
-  background-size: 355px 190px;
+  background-color: #ffffff;
+  opacity: 1;
+  background: repeating-linear-gradient( -45deg, #FECB64, #FECB64 2px, #ffffff 2px, #ffffff 10px );
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 15px;
 }
 
-.carotte_incoming_title {
+.carotte_incoming {
+  background-color: white;
+  border-radius: 20px;
   
 }
