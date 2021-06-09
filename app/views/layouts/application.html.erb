@@ -18,9 +18,14 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    
+
+
+   <div class="overlay d-none">
+     <h4 class="overlay_carot_title">Carottes Restantes : </h4>
+   </div>
+
       <%= yield %>
-    
+
     <%= render 'shared/tabbar' %>
   </body>
 </html>

@@ -1,22 +1,27 @@
 .carotted_title {
   font-size: 22px;
   text-transform: uppercase;
-  color: #8BB1CC;
-  background-color: white;
+  color: white;
+  background-color: #8BB1CC;
   padding: 8px 16px;
   border-radius: 25px;
   text-align: center;
+  margin-bottom: 120px;
+  line-height: 35px;
 }
 
 .carotted_user_name {
   font-size: 22px;
   text-transform: uppercase;
-  color: #4481AD;
-  border: 2px solid #4481AD;
+  color: #8BB1CC;
+  border: 2px solid #8BB1CC;
   padding: 8px 16px;
-  border-radius: 25px;
+  border-radius: 20px;
   text-align: center;
   background-color: white;
+  margin-bottom: 40px;
+  margin-top: 43px;
+  font-weight: 600;
 }
 
 
@@ -52,6 +57,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index:2;
 
     .overlay_points {
       display: flex;
@@ -83,7 +89,7 @@
     }
 
 .carott_card {
-  margin-top: 152px;
+  margin-top: 49px;
 }
 
 .current-points {
@@ -95,3 +101,5 @@
   transition: transform 1200ms cubic-bezier(.99,.01,0,1.01);
   color: white;
 }
+
+
