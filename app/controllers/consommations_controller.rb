@@ -11,9 +11,11 @@ class ConsommationsController < ApplicationController
 
       if @consommation.save
         fun_points = @user.current_points - @fun_card.points
+        old_points = @user.current_points
         fun_total_points = @user.current_points - @fun_card.points
+
         @user.update(current_points: fun_points, total_points: fun_total_points)
-        redirect_to root_path
+        redirect_to root_path(old_points: old_points)
       else
         render 'fun_cards/show'
       end
