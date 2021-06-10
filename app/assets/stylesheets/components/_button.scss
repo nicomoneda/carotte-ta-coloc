@@ -22,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 36px;
+    margin-top: 24px;
     width: 82%;
 }
 
@@ -87,4 +87,14 @@
 
 .bold:hover {
   color: white;
+}
+
+.btn_and_description {
+ width: 40%;
+ text-align: center;
+}
+
+.btn_description {
+  color: grey;
+  margin-top: 5px;
 }
