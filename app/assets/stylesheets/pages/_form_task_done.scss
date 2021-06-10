@@ -34,6 +34,7 @@
 .hide_text {
   opacity: 0;
   height: 0;
+  margin-bottom: 2rem;
 }
 
 // ----
@@ -55,6 +56,10 @@
 
 .view_btn {
   opacity: 1;
+}
+
+.view_btn:active {
+  color: white;
 }
 
 .align_items {
