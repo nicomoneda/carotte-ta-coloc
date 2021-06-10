@@ -12,10 +12,12 @@
           <div class="carotte_incoming_text">
             <div class="carotte_incoming_infos">
               <p><%= first_conso.fun_card.name %></p>
-              <%= image_tag first_conso.user.avatar, alt: 'user_avatar', class: 'avatar_carotte' %>
+              <div class="carotte_incoming_date">
+                <p><%= l first_conso.week_on %></p>
+              </div>
             </div>
-            <div class="carotte_incoming_date">
-              <p><%= l first_conso.week_on %></p>
+            <div class="carotte_incoming_owner">
+              <p>Acheté par :</p><%= image_tag first_conso.user.avatar, alt: 'user_avatar', class: 'avatar_carotte' %>
             </div>
           </div>
         </div>
