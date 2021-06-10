@@ -1,4 +1,5 @@
 function animateValue() {
+  console.log("je usi icicicic")
   const li = document.querySelector('.current-points')
   const counter = document.querySelector("#my_carrots")
   const overlay = document.querySelector(".overlay")
@@ -27,6 +28,7 @@ function animateValue() {
   var stepTime = Math.abs(Math.floor(3000 / range));
   var timer = setInterval(function() {
       current += increment;
+
       counter.innerHTML = current;
       if (current == end) {
           clearInterval(timer);
