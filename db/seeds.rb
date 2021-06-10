@@ -7,10 +7,10 @@ Consommation.destroy_all
 dream_coloc = Coloc.create(name: "dreamteam")
 
 
-lucas =     User.create(coloc: dream_coloc, email: 'monica@gmail.com',  password: 'azerty',      name: 'Monica', avatar: 'monica.jpg')
-nico =      User.create(coloc: dream_coloc, email: 'joey@gmail.com',  password: 'azerty',    name: 'Joey', avatar: 'joey.jpg')
-louis =     User.create(coloc: dream_coloc, email: 'rachel@gmail.com',    password: 'azerty',      name: 'Rachel', avatar: 'rachel.jpg')
-guillaume = User.create(coloc: dream_coloc, email: 'chandler@gmail.com', password: 'azerty',  name: 'Chandler', avatar: 'chandler.jpg')
+lucas =     User.create(coloc: dream_coloc, email: 'monica@gmail.com',  password: 'azerty',      name: 'Monica', avatar: 'monica.jpg', current_points: 180, total_points: 180)
+nico =      User.create(coloc: dream_coloc, email: 'joey@gmail.com',  password: 'azerty',    name: 'Joey', avatar: 'joey.jpg', current_points: 180, total_points: 180)
+louis =     User.create(coloc: dream_coloc, email: 'rachel@gmail.com',    password: 'azerty',      name: 'Rachel', avatar: 'rachel.jpg', current_points: 180, total_points: 180)
+guillaume = User.create(coloc: dream_coloc, email: 'chandler@gmail.com', password: 'azerty',  name: 'Chandler', avatar: 'chandler.jpg', current_points: 180, total_points: 180)
 
 
 Task.create(coloc: dream_coloc,  name: "Vider le verre" ,     description: "Le plus chiant, c'est pas de vider le verre, c'est de trouver le container...", points: 50, carotte_card_name: "joker", carotte_card_points: 60, image: 'verre.png', image_done: 'verre_done.png')
