@@ -11,17 +11,23 @@
 
     <div class="submit_btn_show">
 
+    <div class="btn_and_description">
       <div class="icon_check">
         <%= link_to icon('fas', 'check'), edit_user_task_path(@task.current_user_task), class: "btn-check"%>
         <p class="show_task_points"> + <%= @task.points %> <%= image_tag ('carotte_sans_rond.png'), class:"carot-show" %></p>
       </div>
+      <p class="btn_description">Je valide<br>ma tâche</p>
+    </div>
 
+    <div class="btn_and_description">
       <div class="icon_carot">
         <%= link_to tasks_path, "data-toggle" => "modal", 'data-target' => '#exampleModal', class:"btn-carot" do %>
           <i class="fas fa-times"></i>
         <% end %>
         <p class="show_task_points last"> - <%= @task.carotte_card_points %> <%= image_tag ('carotte_sans_rond.png'), class:"carot-show" %> </p>
       </div>
+      <p class="btn_description">Je l'affecte à<br>un coloc</p>
+    </div>
 
     </div>
 
