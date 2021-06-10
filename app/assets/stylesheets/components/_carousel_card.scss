@@ -1,0 +1,25 @@
+
+
+.flip-card-back {
+  transform: rotateY(90deg);
+  background-color: black;
+}
+
+.flip-card-back.flipped {
+  transition: transform 0.8s;
+  transform: rotateY(0deg);
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.flip-card-front.flipped {
+  transform: rotateY(90deg);
+  transition: transform 0.8s;
+}
+
+.carousel-indicators {
+  top: 0 !important;
+}
