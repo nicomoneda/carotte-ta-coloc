@@ -31,7 +31,6 @@
 
 .carotte_incoming_infos {
   width: 100%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   height: 40px;
@@ -39,6 +38,7 @@
     margin-bottom: 0;
     color: #6d99bd;
     font-weight: 700;
+    font-size: 24px;
   }
 }
 
@@ -46,9 +46,20 @@
   margin-top: 4px;
   width: 100%;
   p {
-    margin-top: 24px;
-    font-size: 24px;
+    font-size: 20px;
     color: #6d99bd;
-    font-weight: 700;
+    font-weight: 500;
+  }
+}
+
+.carotte_incoming_owner {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+  p {
+    margin-right: 1rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #696969;
   }
 }
