@@ -4,21 +4,29 @@
   <div class="carousel-inner">
     <% @fun_cards.each_with_index do |fun_card, index| %>
       <div class="carousel-item <%= 'active' if index.zero? %>">
-        <%= image_tag fun_card.image, alt: 'fun_card_image', class: 'task_image_large'%>
-          <div class="show_task_name">
-            <%= fun_card.name %>
-          </div>
-          <div class="carotte_shop_description">
-            <%= fun_card.description %>
-          </div>
-          <div class="carotte_price_and_image">
-            <div class="carotte_price">
-                <%= fun_card.points %>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <%= image_tag fun_card.image, alt: 'fun_card_image', class: 'task_image_large' %>
+              <div class="show_task_name">
+                <%= fun_card.name %>
+              </div>
+
+              <div class="carotte_price_and_image">
+                <div class="carotte_price">
+                    <%= fun_card.points %>
+                </div>
+                <div>
+                  <%= image_tag 'carotte_sans_rond.png', alt: 'task_image', class: 'carot_image' %>
+                </div>
+              </div>
             </div>
-            <div>
-              <%= image_tag 'carotte_sans_rond.png', alt: 'task_image', class: 'carot_image' %>
-            </div>
           </div>
+          <div class="flip-card-back">
+          toti
+          </div>
+        </div>
+
           <button type="button" class="btn bold" data-toggle="modal" data-target="#modalCarotte<%= fun_card.id %>">
             Je carotte mes colocs !
           </button>
@@ -39,7 +47,7 @@
   <div>
     <ol class="carousel-indicators">
     <% @fun_cards.each_with_index do |fun_card, index| %>
-        <li data-target="#carouselExampleIndicators" data-slide-to=<%= index.to_s %> class="active carouselbtn"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to=<%= index.to_s %> class="<%= 'active' if index.zero? %> carouselbtn"></li>
     <% end %>
    </ol>
   </div>

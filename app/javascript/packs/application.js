@@ -13,7 +13,8 @@ import { animateValue } from '../plugins/numbers_animate.js';
 import { initPictureInput } from '../plugins/preview_picture_input.js';
 import { initViewBtnUpload } from '../plugins/view_btn_upload.js';
 import { initFlatpickr } from "../plugins/flatpickr";
-
+// flip caroussel card
+import { initFlip } from "../plugins/flip_card_caroussel";
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.
@@ -39,4 +40,5 @@ document.addEventListener('turbolinks:load', () => {
   initPictureInput()
   initFlatpickr()
   initViewBtnUpload()
+  initFlip()
 });
