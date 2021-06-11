@@ -9,7 +9,7 @@
             <%= fun_card.name %>
           </div>
           <div class="carotte_shop_description">
-            <%= fun_card.description %>
+            <%= fun_card.description.gsub("\n", "<br/>").html_safe %>
           </div>
           <div class="carotte_price_and_image">
             <div class="carotte_price">
