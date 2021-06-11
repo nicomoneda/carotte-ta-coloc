@@ -24,12 +24,12 @@ Task.create(coloc: dream_coloc,  name: "Sortir les poubelles" , description: "Le
 
 
 FunCard.create(name: "Tout le monde dehors",       description: "Je réserve l'appart pour une soirée privée !", points: 250, image: 'good_bye.png')
-FunCard.create(name: "Apéro",      description: "C'est l'apéro ! J'invite des potes", points: 150, image: 'apero_time.png')
-FunCard.create(name: "No Wifi",         description: "Quelqu'un télécharge ?", points: 100, image: 'stop_wifi.png')
+FunCard.create(name: "Apéro",      description: "C'est l'apéro ! J'invite des potes, vous êtes les bienvenus", points: 150, image: 'apero_time.png')
+FunCard.create(name: "No Wifi",         description: "Quelqu'un télécharge ? C'est pas le moment !", points: 100, image: 'stop_wifi.png')
 FunCard.create(name: "À moi la télé !",     description: "Shotgun ! C'est moi qui choisi ce qu'on regarde", points: 90, image: 'tv.png')
 FunCard.create(name: "La meilleure place",     description: "Désolé les gars, mais ce soir j'suis allongé", points: 70, image: 'couch_seat.png')
 
 
-FunCard.create(name: "Virer un coloc'",     description: "La sentence est irrévocable", points: 1000, image: 'adieu_coloc.png')
+FunCard.create(name: "Virer un coloc'",     description: "La sentence des colocs est irrévocable. Tu sors !", points: 10000, image: 'adieu_coloc.png')
 
 
